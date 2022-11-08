@@ -8,6 +8,9 @@
     font-size: 2.5em;
     margin-top:-2px;
 }
+.yellow{
+    color: #FBB239;
+}
 .red{
     color:#FD5545;
 }
@@ -68,4 +71,70 @@
 }
 .card-body > p {
     line-height: 2;
+}
+/* .newsletter-section{
+    background-image: url(/assets/images/skyler-h-7biITFcYG8o-unsplash.jpg);
+    min-height:400px;
+    background-size: 100% 100%;
+} */
+.client-section{
+    padding:30px 0px;
+    text-align: center;
+}
+.client-section > h2{
+    font-family: 'Syne', sans-serif;
+    font-size: 2.5em;
+    margin-top:-2px;
+    max-width:500px;
+    margin: 0 auto;
+}
+.client-container{
+    width:80%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top:30px;
+}
+.client-card{
+    border:1px solid #dddddd;
+    border-radius:8px;
+    padding:30px;
+    max-width:350px;
+    max-height:250px;
+    margin:5px;
+}
+.client-card-header{
+    display:flex;
+    /* border:1px solid red; */
+    align-items: center;
+    font-family: 'Syne', sans-serif;
+    margin-top:10px;
+}
+.user-picture{
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    border:1px solid #f3f3f3;
+    background-color: #f3f3f3;
+}
+.user-picture > img{
+    width:100%;
+    border-radius:inherit;
+}
+.user-information{
+    /* border:1px solid red; */
+    padding:0px;
+    line-height: 0.25;
+    margin-left:8px;
+}
+.client-card-body{
+    margin-top:-10px;
+    text-align: left;
+    font-family: 'Syne', sans-serif;
+}
+.client-card-body > p {
+    font-size:1.10em;
+    line-height: 1.5;
+    color:grey;
 }
