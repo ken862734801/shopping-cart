@@ -1,7 +1,7 @@
 .offer-section{
     background-color: #f3f3f3;
     text-align: center;
-    padding:30px 0px;
+    padding:50px 0px;
 }
 .offer-section > h2{
     font-family: 'Syne', sans-serif;
@@ -78,8 +78,11 @@
     background-size: 100% 100%;
 } */
 .client-section{
-    padding:30px 0px;
+    padding:50px 0px;
     text-align: center;
+    background-color: #fcfcfc;
+    background-size: 40px 40px;
+    background-image: repeating-linear-gradient(45deg, #f7f7f7 0, #f7f7f7 4px, #fcfcfc 0, #fcfcfc 50%);
 }
 .client-section > h2{
     font-family: 'Syne', sans-serif;
@@ -97,6 +100,7 @@
     margin-top:30px;
 }
 .client-card{
+    background-color: white;
     border:1px solid #dddddd;
     border-radius:8px;
     padding:30px;
@@ -128,6 +132,12 @@
     line-height: 0.25;
     margin-left:8px;
 }
+.user-information > p:nth-child(2){
+    color:rgb(27, 27, 27);
+    font-size:0.90em;
+    margin-right:42px;
+    padding-top:3px;
+}
 .client-card-body{
     margin-top:-10px;
     text-align: left;
@@ -137,4 +147,28 @@
     font-size:1.10em;
     line-height: 1.5;
     color:grey;
+}
+.newsletter-section{
+    min-height: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(/assets/images/tim-mossholder-rk2ZzX2n6Gw-unsplash.jpg); */
+    background-size: 100% 100%;
+}
+.newsletter-container > h2{
+    text-align: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 2.5em;
+    margin-top:-2px;
+}
+.newsletter-container > p{
+    font-family: 'Syne', sans-serif;
+    text-align: center;
+    max-width:800px;
+    width:80%;
+    min-width:380px;
+    margin: 0 auto;
+    line-height: 2;
+    font-size:1.10em;
 }
