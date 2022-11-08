@@ -77,6 +77,12 @@
     min-height:400px;
     background-size: 100% 100%;
 } */
+.collection-section > h2{
+    font-family: 'Syne', sans-serif;
+    font-size: 2.5em;
+    margin-top:-2px;
+    text-align: center;
+}
 .client-section{
     padding:50px 0px;
     text-align: center;
@@ -90,6 +96,7 @@
     margin-top:-2px;
     max-width:500px;
     margin: 0 auto;
+    text-align: center;
 }
 .client-container{
     width:80%;
@@ -149,18 +156,29 @@
     color:grey;
 }
 .newsletter-section{
-    min-height: 300px;
+    min-height: 400px;
     display:flex;
     align-items: center;
     justify-content: center;
-    /* background-image: url(/assets/images/tim-mossholder-rk2ZzX2n6Gw-unsplash.jpg); */
+    background-image: url(/assets/images/alp-duran-OHvzciBb7gE-unsplash.jpg);
     background-size: 100% 100%;
+}
+.newsletter-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    min-height:400px;
+    background-color: rgba(0, 0, 0, 0.356);
 }
 .newsletter-container > h2{
     text-align: center;
     font-family: 'Syne', sans-serif;
     font-size: 2.5em;
     margin-top:-2px;
+    color:white;
+
 }
 .newsletter-container > p{
     font-family: 'Syne', sans-serif;
@@ -171,4 +189,66 @@
     margin: 0 auto;
     line-height: 2;
     font-size:1.10em;
+    color:white;
+    margin-top:-10px;
+
+}
+.footer-container{
+    width:80%;
+    margin: 0 auto;
+    /* border:1px solid red; */
+    display:flex;
+    flex-wrap: wrap;
+    padding:30px 0px;
+   
+}
+.footer-text-container{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width:400px;
+}
+.footer-text-container > p{
+    min-width:400px;
+    max-width:700px;
+    font-family: 'Syne', sans-serif;
+    color:#929292;
+    font-weight: bold;
+    line-height: 2;
+    margin-top:40px;
+}
+.footer-link-container{
+    width:50%;
+    display:flex;
+    justify-content: space-around;
+    flex:1;
+    padding-top:20px;
+}
+li{
+    list-style-type: none;
+    font-family: 'Syne', sans-serif;
+    font-weight: bold;
+    margin:20px 0px;
+    font-size:0.85em;
+    color:#929292;
+}
+.black{
+    font-size:1.25em;
+    font-weight: bold;
+    color:black;
+}
+.footer-button-container{
+    display:flex;
+}
+.social-icon{
+    padding:6px;
+    width:20px;
+    height:20px;
+    background-color: #FD5545;  
+    margin-right:30px;
+    margin-top:5px;
+}
+.social-icon > img{
+    width: 100%;
 }
