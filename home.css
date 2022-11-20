@@ -30,9 +30,12 @@
     width:80%;
     padding:30px 0px;
     margin: 0 auto;
+    /* border:1px solid red; */
 }
 .hero-section-body{
     display:flex;
+    justify-content: center;
+    /* border:1px solid red; */
 }
 .left-container{
     font-family: var(--font);
@@ -51,7 +54,11 @@
     font-size:1.15em;
     margin-top:10px;
 }
-.left-container > button {
+.button-container{
+    display:flex;
+    justify-content: center;
+}
+.button-container > button {
     background-color: var(--orange);
     color:white;
     padding:11px;
@@ -61,16 +68,16 @@
     border:none;
     font-size: 1.0em;
 }
-.left-container > button > span > img{
+.button-container > button > span > img{
     width:18px;
     margin-left:5px;
     margin-bottom:-4px;
 }
-.widget-container{
+/* .widget-container{
     width:100%;
     display:flex;
     border:1px solid red;
-}
+} */
 
 .right-container{
     width:60%;
@@ -142,7 +149,7 @@
 /* CSS for the offer section and offer cards. */
 .offer-section{
     background-color: var(--gray);
-    padding:80px 0px;
+    padding:60px 0px;
     font-family: var(--font);
     text-align: center;
 }
@@ -178,12 +185,13 @@
     align-items: center;
     margin: 0 auto;
     background-color: var(--gray);
-    width:140px;
-    height:140px;
+    width:130px;
+    height:130px;
     border-radius:50%;
 }
 .icon{
-    width:80px;
+    width:70%;
+    overflow: hidden;
 }
 .card-body{
     padding-bottom:20px;
@@ -507,14 +515,14 @@ li{
         font-size:2.00em !important;
     }
     .number{
-       font-size:2.3em;
+       font-size:2.2em;
     }
     .left-container > h1{
-        font-size:3.5em;
+        font-size:3.3em;
         text-align: center;
     }
     .left-container > h2{
-        font-size:3.5em;
+        font-size:3.3em;
         text-align: center;
     }
     .left-container > p {
@@ -527,12 +535,19 @@ li{
         font-size: 0.90em;
         padding:8px 0px;
     }
+    .button-container {
+        margin-bottom:10px;
+    }
     .hero-section-footer > div >li {
         padding:0px;
+        /* border:1px solid red; */
+        margin:20px;
     }
     .hero-section-footer > div > li:nth-of-type(2){
         border:none;
-        padding:5px 0px;
+        padding:1px 0px;
+        margin-top:-2px;
+        margin-bottom:-2px;
     }
     .card-container{
         grid-template-columns: 1fr 1fr;
@@ -564,6 +579,9 @@ li{
    .collection-container{
         grid-template-columns: 1fr 1fr;
    }
+   nav > a {
+        font-size:0.85em;
+   }
    .item-container{
         width:195px;
         margin: 0 auto;
@@ -574,6 +592,9 @@ li{
    .item-card-body > img{
         width:95%;
    }
+   .item-name{
+        font-size:0.95em;
+   }
    .client-card{
         width:300px;
         padding:16px;
@@ -583,8 +604,8 @@ li{
         line-height: 1.50;
    }
    .client-picture{
-    width:45px;
-    height:45px;
+        width:45px;
+        height:45px;
     }
     .client-information{
         margin-left:8px;
@@ -597,6 +618,12 @@ li{
     }
     .newsletter-container > p{
         font-size:1em;
+    }
+    .footer-text-container{
+        font-size:0.95em;
+    }
+    .footer-link-container > .quick-links, .find-products, .get-help {
+        font-size:0.95em;
     }
 }
 
