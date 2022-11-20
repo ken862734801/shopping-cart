@@ -27,7 +27,7 @@
 }
 /* CSS for the hero section. */
 .hero-section-container{
-    width:80%;
+    width:75%;
     padding:30px 0px;
     margin: 0 auto;
     /* border:1px solid red; */
@@ -56,7 +56,6 @@
 }
 .button-container{
     display:flex;
-    justify-content: center;
 }
 .button-container > button {
     background-color: var(--orange);
@@ -133,7 +132,7 @@
 }
 .hero-section-footer > div {
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width:100%;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -537,6 +536,7 @@ li{
     }
     .button-container {
         margin-bottom:10px;
+        justify-content: center;
     }
     .hero-section-footer > div >li {
         padding:0px;
@@ -580,7 +580,7 @@ li{
         grid-template-columns: 1fr 1fr;
    }
    nav > a {
-        font-size:0.85em;
+        font-size:0.80em;
    }
    .item-container{
         width:195px;
