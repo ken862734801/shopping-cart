@@ -26,10 +26,21 @@
 }
 /* CSS for the header and nav. */
 header{
+    width:100%;
+    background-color: white;
+    z-index:100000;
     font-family: var(--font);
-    margin-bottom:30px;
+    top:0px;
+    position: fixed;
+    transition: top 0.1s ease-in-out;
+    padding-bottom:10px;
 }
+.header-up {
+    top: -60px;
+}
+
 .header-container {
+    position:relative;
     width:80%;
     margin: 0 auto;
     display:flex;
@@ -37,7 +48,7 @@ header{
 }
 .brand-logo{
     padding-top:13px;
-    font-size: 1em;
+    font-size: 0.95em;
 }
 navbar > a{
     display:inline-flex;
@@ -45,7 +56,7 @@ navbar > a{
     border-top:2.5px solid rgba(255, 255, 255, 0);
     margin:0px 30px;
     font-weight: bold;
-    font-size:1.1em;
+    font-size:1.0em;
 }
 navbar > a:hover {
     transition: 0.2s;
@@ -55,13 +66,20 @@ navbar > a:hover {
 }
 .customer-functions-container{
     display:flex;
-    padding-top:20px;
 }
 .customer-functions-container > div{
     margin: 0px 10px;
+    padding-top:22px;
 }
 .fa-cart-shopping{
     color:var(--yellow);
+}
+.customer-icon{
+    margin-top:-3px !important;
+    /* border:1px solid red; */
+}
+.customer-icon > img{
+    width:23px;
 }
 .menu-bars{
     display:none;
@@ -71,6 +89,7 @@ navbar > a:hover {
     width:80%;
     padding:30px 0px;
     margin: 0 auto;
+    margin-top:60px;
     /* border:1px solid red; */
 }
 .hero-section-body{
@@ -104,7 +123,7 @@ navbar > a:hover {
     padding:11px;
     margin-top:30px;
     width:130px;
-    border-radius:4px;
+    border-radius:8px;
     border:none;
     font-size: 1.0em;
 }
@@ -555,13 +574,15 @@ li{
         width:95%;
     }
     .brand-logo{
-        font-size:.75em;
+        padding-top:11px;
+        font-size:.80em;
     }
     navbar{
         display:none;
     }
     .customer-functions-container > div{
         margin: 0px 7.5px;
+        padding-top:18px;
     }
     .menu-bars{
         display:block;
