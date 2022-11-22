@@ -653,8 +653,8 @@ li{
         width:70%;
     }
     .card-body > p{
-        font-size: 0.90em;
-        line-height: 1.50em;
+        font-size: 0.95em;
+        line-height: 1.75em;
     }
     .card-body{
         padding-bottom:5px;
@@ -686,8 +686,8 @@ li{
         padding:16px;
    }
    .client-card-body > p {
-        font-size:0.90em;
-        line-height: 1.50;
+        font-size:0.95em;
+        line-height: 1.75;
    }
    .client-picture{
         width:45px;
@@ -697,10 +697,10 @@ li{
         margin-left:8px;
     }
     .client-information > p:nth-of-type(1){
-        font-size:.90em;
+        font-size:.95em;
    }
     .client-information >p:nth-child(2){
-        font-size:0.80em;
+        font-size:0.85em;
     }
     .newsletter-container > p{
         font-size:1em;
