@@ -49,6 +49,7 @@ header{
 .brand-logo{
     padding-top:13px;
     font-size: 0.95em;
+    cursor:pointer;
 }
 navbar > a{
     display:inline-flex;
@@ -108,19 +109,21 @@ navbar > a:hover {
 .hero-section-body{
     display:flex;
     justify-content: center;
+    flex-wrap: wrap-reverse;
     /* border:1px solid red; */
 }
 .left-container{
     font-family: var(--font);
-    width:40%;
+    width:50%;
     min-width:400px;
+    padding-top:20px;
     /* border:1px solid red; */
 }
 .left-container > h1{
-    font-size:4.55em;
+    font-size:4.80em;
 }
 .left-container > h2{
-    font-size:4.55em;
+    font-size:4.80em;
 }
 .left-container > p {
     width:85%;
@@ -139,6 +142,7 @@ navbar > a:hover {
     border-radius:8px;
     border:none;
     font-size: 1.0em;
+    cursor:pointer;
 }
 .button-container > button > span > img{
     width:18px;
@@ -147,7 +151,7 @@ navbar > a:hover {
 }
 .widgets-container{
     margin:70px 0px;
-    width:90%;
+    width:80%;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -217,6 +221,7 @@ navbar > a:hover {
 }
 .fa-heart{
     color:white;
+    cursor:pointer;
 }
 .widget-style{
     font-size:0.70em;
@@ -225,19 +230,27 @@ navbar > a:hover {
 }
 .widget-add-btn{
     font-size:0.85em;
+    cursor:pointer;
 }
-
+.widget-add-btn:hover{
+    text-decoration: underline;
+}
 .right-container{
-    width:60%;
+    width:50%;
+    display:flex;
+    justify-content: center;
     /* border:1px solid blue; */
+    min-width:400px;
+    margin: auto;
 }
 
 .main-image-background{
     position:relative;
     background-color: var(--gray);
-    border-radius: 48px;
-    max-width:675px;
+    border-radius: 36px;
+    max-width:775px;
     margin: 10px auto;
+    min-width:400px;
     /* border:1px solid blue; */
 }
 .main-image-background > h1{
@@ -266,11 +279,12 @@ navbar > a:hover {
     font-size:1em;
 }
 .main-image-container > img{
-    max-width:675px;
+    max-width:775px;
+    width:100%;
     margin-top:-140px;
     padding-right:80px;
     transform: rotate(330deg);
-    border:1px solid red;
+    /* border:1px solid red; */
 }
 .main-image-description {
     width:80%;
@@ -734,6 +748,22 @@ li{
     .widget{
         padding:0px;
     }
+    .right-container{
+        margin: -10px auto;
+    }
+    .main-image-background > h1{
+        font-size:7.25em;
+    }
+    .ribbon{
+        width:44.5px;
+        height:70px;
+        font-size: 0.75em;
+    }
+    .main-image-container > img{
+        margin-top:-80px;
+        min-width:395px;
+        width:100%;
+    }
     .hero-section-footer > div >li {
         padding:0px;
         /* border:1px solid red; */
@@ -829,5 +859,9 @@ li{
 @media screen  and (max-width:600px){
     nav > a:nth-of-type(2){
         margin-left:10px;
+    }
+    .right-container{
+        margin-top:-30px;
+        margin-bottom:5px;
     }
 }
