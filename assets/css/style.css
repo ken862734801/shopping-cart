@@ -132,11 +132,15 @@ navbar > a:hover {
     margin-left:5px;
     margin-bottom:-4px;
 }
-/* .widget-container{
+.widget-container{
     width:100%;
     display:flex;
     border:1px solid red;
-} */
+}
+.widget{
+    width:40%;
+    border:1px solid black;
+}
 
 .right-container{
     width:60%;
@@ -290,6 +294,10 @@ navbar > a:hover {
 }
 nav > a{
     cursor: pointer;
+}
+nav > a:hover{
+    color:var(--yellow);
+    transition: 0.2s;
 }
 nav > a:nth-of-type(2){
     margin-left:50px;
