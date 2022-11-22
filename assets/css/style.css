@@ -140,6 +140,7 @@ navbar > a:hover {
 .widget{
     width:40%;
     border:1px solid black;
+    border-radius: 8px;
 }
 
 .right-container{
@@ -662,7 +663,7 @@ li{
     }
     .card-body > p{
         font-size: 0.95em;
-        line-height: 1.75em;
+        line-height: 1.65em;
     }
     .card-body{
         padding-bottom:5px;
@@ -695,7 +696,7 @@ li{
    }
    .client-card-body > p {
         font-size:0.95em;
-        line-height: 1.75;
+        line-height: 1.65;
    }
    .client-picture{
         width:45px;
