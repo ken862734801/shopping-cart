@@ -4,82 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
-    
-    <title>Shopping Cart</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <title>Sneakers</title>
 </head>
 <body>
-    <header>
-        <div class="header-wrap">
-            <div class="brand-name">
+    <header class="header-down" id="header">
+        <div class="header-container">
+            <div class="brand-logo">
                 <h1>SNEAKERS</h1>
             </div>
-            <div class="nav-links">
+            <navbar>
                 <a>Home</a>
                 <a>About</a>
                 <a>Shop</a>
                 <a>Testimonial</a>
-                <a>Collections</a>
-            </div>
-            <div class="shopping-cart">
-                <i class="fa-solid fa-cart-shopping fa-lg"></i>
-                <i class="fa-regular fa-user fa-lg"></i>
+                <a>Newsletter</a>
+            </navbar>
+            <div class="customer-functions-container">
+                <div class="search-bar-container">
+                    <!-- <input type="text"> -->
+                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                </div>
+                <div class="shopping-cart">
+                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                </div>
+                <div class="customer-icon">
+                    <img src="./assets//images/user (1).png">
+                    <!-- <i class="fa-regular fa-user fa-xl"></i> -->
+                </div>
+                <div class="menu-bars">
+                    <i class="fa-solid fa-bars fa-lg"></i>
+                </div>
             </div>
         </div>
     </header>
-    
     <section class="hero-section">
         <div class="hero-section-container">
             <div class="hero-section-body">
-                <div class="text-container">
-                    <h1>Summer <br> Collections</h1>
-                    <h2 class="red">2022</h2>
+                <div class="left-container">
+                    <h1>Summer <br> Collections </h1>
+                    <h2 class="orange">2022</h2>
                     <p>Find your shoes from our various collections.
-                    Here shoes are endless and profit is also endless.</p>
-                    <button>Shop Now <span><img src="./assets/images/right-arrow-circular-button-outline.png"></span></button>
-                    <div class="widget-container">
-                        <div class="widget"></div>
-                        <div class="widget"></div>
+                    Here shoes are endless and customers are happy.</p>
+                    <div class="button-container">
+                        <button>Shop Now <span><img src="./assets/images/right-arrow-circular-button-outline.png"></span></button>
                     </div>
+                    <div class="widget-container"></div>
                 </div>
-                <figure>
-                    <div class="background-image">
+                <div class="right-container">
+                    <!-- <div class="main-image-background">
                         <h1>NIKE</h1>
-                        <div class="ribbon">40% off</div>
-                        <div class="image-container">
+                        <div class="ribbon">
+                            <h6>40% OFF</h6>
+                        </div>
+                        <div class="main-image-container">
                             <img src="./assets/images/air-jordan-1-satin-banned.png">
                         </div>
-                        <div class="image-description">
-                            <div class="rating">
-                            <p>Air Jordan 1</p>
-                                <div>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                </div>
+                        <div class="main-image-description">
+                            <div class="main-image-rating">
+                                <p>Air Jordan 1</p>
                             </div>
-                            <div class="buy-now">
-                                <p class="red">$200</p>
-                                <button>Buy Now</button>
-                            </div>
+                            <div class="main-image-btn"></div>
                         </div>
-                    </div>
-                </figure>
+                    </div> -->
+                </div>
             </div>
             <div class="hero-section-footer">
                 <div>
-                    <li><span class="red number">20k +</span> Orders Completed</li>
-                    <li><span class="red number">40k +</span> Regular Visitors</li>
-                    <li><span class="red number">15k +</span> Happy Customers</li>
+                    <li><span class="orange number">20k +</span> Orders Completed</li>
+                    <li><span class="orange number">40k +</span> Regular Visitors</li>
+                    <li><span class="orange number">15k +</span> Happy Customers</li>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="offer-section">
-        <h2>What We <span class="red">Offer</span></h2>
+        <h2 class="section-title">What We <span class="orange">Offer</span></h2>
         <div class="card-container">
             <div class="card">
                 <div class="card-header">
@@ -131,62 +134,113 @@
             </div>
         </div>
     </section>
+
     <section class="collection-section">
-        <h2>Our <span class="red">Collection</span></h2>
-        <div class="collection-container">
-            <div class="product-card">
-                <div class="placeholder">
-                    <img src="https://image.goat.com/attachments/product_template_pictures/images/057/700/191/original/GZ6596.png.png">
+        <h2 class="section-title">Our <span class="orange">Collection</span></h2>
+        <nav>
+            <a class="yellow">Men</a>
+            <a>Women</a>
+            <a>Children</a>
+        </nav>
+        <div class="collection-container" id="collection-container">
+            <div class="item-container">
+                <div class="item-card">
+                    <div class="item-card-header"></div>
+                    <div class="item-card-body">
+                        <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png">
+                    </div>
+                    <div class="item-price-container">
+                        <h6 class="retail-price">$130</h6>
+                        <h6 class="msrp-price"><strike>$150</strike></h6>
+                    </div>
                 </div>
-                <div class="product-name"></div>
-                <div class="product-price"></div>
+                <h6 class="item-name">Air Jordan 1 Mid</h6>
             </div>
-            <div class="product-card">
-                <div class="placeholder">
-                    <img src="https://image.goat.com/attachments/product_template_pictures/images/060/352/669/original/DJ3005_144.png.png">
+            <div class="item-container">
+                <div class="item-card">
+                    <div class="item-card-header"></div>
+                    <div class="item-card-body">
+                        <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png">
+                    </div>
+                    <div class="item-price-container">
+                        <h6 class="retail-price">$130</h6>
+                        <h6 class="msrp-price"><strike>$150</strike></h6>
+                    </div>
                 </div>
-                <div class="product-name"></div>
-                <div class="product-price"></div>
+                <h6 class="item-name">Nike Air Max 90</h6>
             </div>
-            <div class="product-card">
-                <div class="placeholder">
-                    <img src="https://cdn.flightclub.com/2200/TEMPLATE/321719/1.jpg">
+            <div class="item-container">
+                <div class="item-card">
+                    <div class="item-card-header"></div>
+                    <div class="item-card-body">
+                        <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png">
+                    </div>
+                    <div class="item-price-container">
+                        <h6 class="retail-price">$130</h6>
+                        <h6 class="msrp-price"><strike>$150</strike></h6>
+                    </div>
                 </div>
-                <div class="product-name"></div>
-                <div class="product-price"></div>
+                <h6 class="item-name">Nike Air Max 90</h6>
             </div>
-            <div class="product-card">
-                <div class="placeholder">
-                    <img src="https://image.goat.com/attachments/product_template_pictures/images/059/789/684/original/DD2314_104.png.png">
+            <div class="item-container">
+                <div class="item-card">
+                    <div class="item-card-header"></div>
+                    <div class="item-card-body">
+                        <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png">
+                    </div>
+                    <div class="item-price-container">
+                        <h6 class="retail-price">$130</h6>
+                        <h6 class="msrp-price"><strike>$150</strike></h6>
+                    </div>
                 </div>
-                <div class="product-name"></div>
-                <div class="product-price"></div>
+                <h6 class="item-name">Nike Air Max 90</h6>
             </div>
-            <div class="product-card">
-                <div class="placeholder">
-                    <img src="https://image.goat.com/attachments/product_template_pictures/images/057/398/335/original/795609_00.png.png">
+            <div class="item-container">
+                <div class="item-card">
+                    <div class="item-card-header"></div>
+                    <div class="item-card-body">
+                        <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png">
+                    </div>
+                    <div class="item-price-container">
+                        <h6 class="retail-price">$130</h6>
+                        <h6 class="msrp-price"><strike>$150</strike></h6>
+                    </div>
                 </div>
-                <div class="product-name"></div>
-                <div class="product-price"></div>
+                <h6 class="item-name">Nike Air Max 90</h6>
             </div>
-            <div class="product-card">
-                <div class="placeholder">
-                    <img src="https://image.goat.com/attachments/product_template_pictures/images/059/825/001/original/GX1318.png.png">
+            <div class="item-container">
+                <div class="item-card">
+                    <div class="item-card-header"></div>
+                    <div class="item-card-body">
+                        <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png">
+                    </div>
+                    <div class="item-price-container">
+                        <h6 class="retail-price">$130</h6>
+                        <h6 class="msrp-price"><strike>$150</strike></h6>
+                    </div>
                 </div>
-                <div class="product-name"></div>
-                <div class="product-price"></div>
+                <h6 class="item-name">Nike Air Max 90</h6>
+            </div>
+        </div>
+        <div class="pagination-container">
+            <div class="left arrow" id="previous-btn">
+                <img src="./assets/images/back.png">
+            </div>
+            <div class="right arrow" id="next-btn">
+                <img src="./assets/images/next (2).png">
             </div>
         </div>
     </section>
+
     <section class="client-section">
-        <h2>What Our <span class="red">Clients Say</span> About Us</h2>
+        <h2 class="section-title">What Our <span class="orange">Clients Say</span> About Us</h2>
         <div class="client-container">
             <div class="client-card">
                 <div class="client-card-header">
-                    <div class="user-picture">
-                        <img src="./assets/images/profilepic - Copy.png">
+                    <div class="client-picture">
+                        <img src="./assets/images/profilepic.png">
                     </div>
-                    <div class="user-information">
+                    <div class="client-information">
                         <p class="yellow">Daniel Caesar</p>
                         <p>Designer</p>
                     </div>
@@ -199,10 +253,10 @@
             </div>
             <div class="client-card">
                 <div class="client-card-header">
-                    <div class="user-picture">
-                        <img src="./assets/images/profilepic - Copy.png">
+                    <div class="client-picture">
+                        <img src="./assets/images/profilepic.png">
                     </div>
-                    <div class="user-information">
+                    <div class="client-information">
                         <p class="yellow">Daniel Caesar</p>
                         <p>Designer</p>
                     </div>
@@ -215,10 +269,10 @@
             </div>
             <div class="client-card">
                 <div class="client-card-header">
-                    <div class="user-picture">
-                        <img src="./assets/images/profilepic - Copy.png">
+                    <div class="client-picture">
+                        <img src="./assets/images/profilepic.png">
                     </div>
-                    <div class="user-information">
+                    <div class="client-information">
                         <p class="yellow">Daniel Caesar</p>
                         <p>Designer</p>
                     </div>
@@ -232,33 +286,41 @@
         </div>
     </section>
     <section class="newsletter-section">
-       <div class="newsletter-container">
-            <h2>Join Our <span class="red">Newsletter</span></h2>
+        <div class="newsletter-container">
+            <h2 class="section-title">Join Our <span class="orange">Newsletter</span></h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Odit voluptatum ratione dolore molestiae? Repellat iste sequi quis ullam, natus nisi, 
                 dolorem eum odio doloribus labore!
             </p>
-       </div>
+            <div class="user-input-container">
+                <input type="email" id="email" placeholder="Enter your email...">
+                <div>
+                    <button id="submit">
+                        <img src="./assets/images/right-arrow-circular-button-outline.png">
+                    </button>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="footer">
+    <footer>
         <div class="footer-container">
             <div class="footer-text-container">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea corporis sequi fuga excepturi consequatur. 
                     Aperiam at totam exercitationem vel illum nesciunt, architecto sunt dolorem voluptatem.
                 </p>
                 <div class="footer-button-container">
-                    <div class="social-icon">
+                    <button class="social-icon">
                         <img src="./assets/images/instagram.png">
-                    </div>
-                    <div class="social-icon">
-                        <img src="./assets/images/instagram.png">
-                    </div>
-                    <div class="social-icon">
-                        <img src="./assets/images/instagram.png">
-                    </div>
-                    <div class="social-icon">
-                        <img src="./assets/images/instagram.png">
-                    </div>
+                    </button>
+                    <button class="social-icon">
+                        <img src="./assets/images/twitter.png">
+                    </button>
+                    <button class="social-icon">
+                        <img src="./assets/images/facebook.png">
+                    </button>
+                    <button class="social-icon">
+                        <img src="./assets/images/tiktok.png">
+                    </button>
                 </div>
             </div>
             <div class="footer-link-container">
@@ -288,8 +350,9 @@
                 </div>
             </div>
         </div>
-    </section>
-    <footer></footer>
+    </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/178167676b.js" crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script>
 </html>
