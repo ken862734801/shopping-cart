@@ -1,0 +1,190 @@
+let collectionContainer = document.getElementById("collection-container");
+let previousBtn = document.getElementById("previous-btn");
+let nextBtn = document.getElementById("next-btn");
+
+let current_page = 1;
+let items_per_page = 6;
+
+function prevPage(){
+    if(current_page > 1){
+        current_page--;
+        changePage(current_page);
+    }
+};
+
+function nextPage(){
+    if(current_page < numPages()){
+        current_page++;
+        changePage(current_page)
+    }
+};
+function changePage(page){
+    if(page < 1) page = 1;
+    if (page > numPages()) page = numPages();
+    collectionContainer.textContent = "";
+    
+    for(let i = (page-1)*items_per_page; i < (page * items_per_page); i++){
+        createProductCard(wmns_shoes[i]);
+    };
+    if(page == 1){
+        previousBtn.style.opacity = .55;
+        previousBtn.style.cursor = "auto";
+    }else {
+        previousBtn.style.opacity = 1;
+        previousBtn.style.cursor = "pointer";
+    };
+
+    if(page == numPages()){
+        nextBtn.style.opacity = .55;
+        nextBtn.style.cursor = "auto";
+    }else {
+        nextBtn.style.opacity = 1;
+        nextBtn.style.cursor = "pointer";
+    }
+};
+
+function numPages(){
+    return Math.ceil(products.length/items_per_page);
+}
+
+window.onload = function() {
+    changePage(1);
+};
+
+nextBtn.addEventListener("click", nextPage);
+previousBtn.addEventListener("click", prevPage);
+
+class Product {
+    constructor(name, image, retail, msrp){
+        this.name = name;
+        this.image = image;
+        this.retail = retail;
+        this.msrp = msrp;
+    }
+};
+
+// Objects to test the pagination.
+const product_1 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
+const product_2 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
+const product_3 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
+const product_4 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
+const product_5 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
+const product_6 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
+
+const product_7 = new Product("Nike Air Max 90","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png", 130 , 150 );
+const product_8 = new Product("Nike Air Max 90","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png", 130 , 150 );
+const product_9 = new Product("Nike Air Max 90","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png", 130 , 150 );
+const product_10 = new Product("Nike Air Max 90","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png", 130 , 150 );
+const product_11 = new Product("Nike Air Max 90","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png", 130 , 150 );
+const product_12 = new Product("Nike Air Max 90","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png", 130 , 150 );
+
+let products = [product_1, product_2, product_3, product_4, product_5, product_6, product_7, product_8, product_9, product_10, product_11, product_12];
+
+const wmn_1 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_2 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_3 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_4 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_5 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_6 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_7 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+const wmn_8 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+const wmn_9 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+const wmn_10 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+const wmn_11 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+const wmn_12 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+
+let wmns_shoes = [wmn_1, wmn_2, wmn_3, wmn_4, wmn_5, wmn_6, wmn_7, wmn_8, wmn_9, wmn_10, wmn_11, wmn_11];
+
+const kid_1 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_2 = new Product();
+const kid_3 = new Product();
+const kid_4 = new Product();
+const kid_5 = new Product();
+const kid_6 = new Product();
+const kid_7 = new Product();
+const kid_8 = new Product();
+const kid_9 = new Product();
+const kid_10 = new Product();
+const kid_11 = new Product();
+const kid_12 = new Product();
+
+let kids_shoes = [];
+
+function createProductCard (product){
+    // Element Creation.
+    let itemContainer = document.createElement("div");
+    let itemCard = document.createElement("div");
+    let itemCardHeader = document.createElement("div");
+    let itemCardBody = document.createElement("div");
+    let itemImage = document.createElement("img");
+    let itemPriceContainer = document.createElement("div");
+    let retailPrice = document.createElement("h6");
+    let msrpPrice = document.createElement("h6");
+    let itemName = document.createElement("h6");
+
+    // Element class name.
+    itemContainer.className = "item-container";
+    itemCard.className = "item-card";
+    itemCardHeader.className = "item-card-header";
+    itemCardBody.className = "item-card-body";
+    itemPriceContainer.className = "item-price-container";
+    retailPrice.className = "retail-price";
+    msrpPrice.className = "msrp-price";
+    itemName.className = "item-name";
+    
+    // TextContent and image src.
+    itemImage.src = product.image;
+    itemName.textContent = product.name;
+    retailPrice.textContent = "$" + product.retail;
+    msrpPrice.innerHTML = `<strike>$${product.msrp}</strike>`
+
+    // Appending elements to each other and DOM.
+
+    collectionContainer.appendChild(itemContainer);
+
+    itemContainer.append(itemCard, itemName);
+    itemCard.append(itemCardHeader, itemCardBody, itemPriceContainer);
+    itemCardBody.append(itemImage);
+    itemPriceContainer.append(retailPrice, msrpPrice);
+}
+
+console.log(products);
+
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('#header').removeClass('header-down').addClass('header-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('#header').removeClass('header-up').addClass('header-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
