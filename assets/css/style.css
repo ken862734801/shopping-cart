@@ -71,8 +71,21 @@ navbar > a:hover {
     margin: 0px 10px;
     padding-top:22px;
 }
+.shopping-cart{
+    position:relative;
+}
 .fa-cart-shopping{
     color:var(--yellow);
+}
+.shopping-cart-alert{
+    position:absolute;
+    top:18px;
+    left:20px;
+    width:5px;
+    height:5px;
+    padding:3px;
+    border-radius:50%;
+    background-color: var(--orange);
 }
 .customer-icon{
     margin-top:-3px !important;
@@ -148,6 +161,7 @@ navbar > a:hover {
     border-radius: 6px;
     min-width:250px;
     padding:2px;
+    margin:2px;
 }
 .widget-image-container{
     width:40%;
@@ -678,8 +692,14 @@ li{
     .widget{
         margin: 5px auto;
     }
+    .widget-image{
+        margin:6px;
+    }
 }
 @media screen  and (max-width:768px){
+    .shopping-cart-alert{
+        top:14px;
+    }
     .section-title{
         font-size:2.00em !important;
     }
