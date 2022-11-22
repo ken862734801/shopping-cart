@@ -2,7 +2,6 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-
 }
 :root{
     --orange: #FD5545;
@@ -25,9 +24,51 @@
     font-size:2.6em;
     margin-right:16px;
 }
+/* CSS for the header and nav. */
+header{
+    font-family: var(--font);
+    margin-bottom:30px;
+}
+.header-container {
+    width:80%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+}
+.brand-logo{
+    padding-top:13px;
+    font-size: 1em;
+}
+navbar > a{
+    display:inline-flex;
+    padding-top:20px;
+    border-top:2.5px solid rgba(255, 255, 255, 0);
+    margin:0px 30px;
+    font-weight: bold;
+    font-size:1.1em;
+}
+navbar > a:hover {
+    transition: 0.2s;
+    /* border-top: 2.5px solid var(--yellow); */
+    color:var(--yellow);
+    cursor: pointer;
+}
+.customer-functions-container{
+    display:flex;
+    padding-top:20px;
+}
+.customer-functions-container > div{
+    margin: 0px 10px;
+}
+.fa-cart-shopping{
+    color:var(--yellow);
+}
+.menu-bars{
+    display:none;
+}
 /* CSS for the hero section. */
 .hero-section-container{
-    width:75%;
+    width:80%;
     padding:30px 0px;
     margin: 0 auto;
     /* border:1px solid red; */
@@ -509,6 +550,27 @@ li{
     font-size:0.85em;
     color:#929292;
 }
+@media screen and (max-width:1024px){
+    .header-container{
+        width:95%;
+    }
+    .brand-logo{
+        font-size:.75em;
+    }
+    navbar{
+        display:none;
+    }
+    .customer-functions-container > div{
+        margin: 0px 7.5px;
+    }
+    .menu-bars{
+        display:block;
+        padding-left:4px;
+    }
+    .customer-icon{
+        display:none;
+    }
+}
 @media screen  and (max-width:768px){
     .section-title{
         font-size:2.00em !important;
@@ -594,6 +656,9 @@ li{
    }
    .item-name{
         font-size:0.95em;
+   }
+   .arrow {
+        width:30px;
    }
    .client-card{
         width:300px;

@@ -2,23 +2,6 @@ let collectionContainer = document.getElementById("collection-container");
 let previousBtn = document.getElementById("previous-btn");
 let nextBtn = document.getElementById("next-btn");
 
-let links = [
-            // Jordan One Mids  
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png",
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png",
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png",
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png",
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png",
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png",
-            // Air Max 90
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png",
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png",
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png",
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png",
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png",
-            "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png"
-        ];
-
 let current_page = 1;
 let items_per_page = 6;
 
@@ -41,28 +24,33 @@ function changePage(page){
     collectionContainer.textContent = "";
     
     for(let i = (page-1)*items_per_page; i < (page * items_per_page); i++){
-        createProductCard(products[i]);
+        createProductCard(wmns_shoes[i]);
     };
     if(page == 1){
         previousBtn.style.opacity = .55;
+        previousBtn.style.cursor = "auto";
     }else {
         previousBtn.style.opacity = 1;
+        previousBtn.style.cursor = "pointer";
     };
 
     if(page == numPages()){
         nextBtn.style.opacity = .55;
+        nextBtn.style.cursor = "auto";
     }else {
         nextBtn.style.opacity = 1;
+        nextBtn.style.cursor = "pointer";
     }
 };
 
 function numPages(){
-    return Math.ceil(links.length/items_per_page);
+    return Math.ceil(products.length/items_per_page);
 }
 
 window.onload = function() {
     changePage(1);
 };
+
 nextBtn.addEventListener("click", nextPage);
 previousBtn.addEventListener("click", prevPage);
 
@@ -91,6 +79,36 @@ const product_11 = new Product("Nike Air Max 90","https://static.nike.com/a/imag
 const product_12 = new Product("Nike Air Max 90","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png", 130 , 150 );
 
 let products = [product_1, product_2, product_3, product_4, product_5, product_6, product_7, product_8, product_9, product_10, product_11, product_12];
+
+const wmn_1 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_2 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_3 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_4 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_5 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_6 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
+const wmn_7 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+const wmn_8 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+const wmn_9 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+const wmn_10 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+const wmn_11 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+const wmn_12 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b3831dc7-7151-4fb4-82a3-d74306e9706a/jordan-sophia-womens-slides-bW5vFq.png", 85, 105);
+
+let wmns_shoes = [wmn_1, wmn_2, wmn_3, wmn_4, wmn_5, wmn_6, wmn_7, wmn_8, wmn_9, wmn_10, wmn_11, wmn_11];
+
+const kid_1 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_2 = new Product();
+const kid_3 = new Product();
+const kid_4 = new Product();
+const kid_5 = new Product();
+const kid_6 = new Product();
+const kid_7 = new Product();
+const kid_8 = new Product();
+const kid_9 = new Product();
+const kid_10 = new Product();
+const kid_11 = new Product();
+const kid_12 = new Product();
+
+let kids_shoes = [];
 
 function createProductCard (product){
     // Element Creation.
