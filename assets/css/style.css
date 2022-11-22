@@ -609,7 +609,7 @@ li{
        font-size:2.2em;
     }
     .left-container > h1{
-        font-size:3.3em;
+        font-size:3.1em;
         text-align: center;
     }
     .left-container > h2{
@@ -696,7 +696,7 @@ li{
    }
    .client-card-body > p {
         font-size:0.95em;
-        line-height: 1.65;
+        line-height: 1.55;
    }
    .client-picture{
         width:45px;
