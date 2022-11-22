@@ -65,6 +65,12 @@ navbar > a:hover {
     color:var(--yellow);
     cursor: pointer;
 }
+.fa-lg{
+    cursor:pointer;
+}
+.customer-icon{
+    cursor:pointer;
+}
 .customer-functions-container{
     display:flex;
 }
