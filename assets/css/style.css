@@ -153,8 +153,8 @@ navbar > a:hover {
     width:40%;
 }
 .widget-image{
-    height:90px;
-    width:90px;
+    height:95px;
+    width:95px;
     /* border:1px solid rgb(15, 15, 15); */
     border-radius:6px;
     background-color: white;
@@ -207,10 +207,10 @@ navbar > a:hover {
 .widget-style{
     font-size:0.70em;
     color:white;
-    margin:4px 0px;
+    margin:3px 0px;
 }
 .widget-add-btn{
-    font-size:0.80em;
+    font-size:0.85em;
 }
 
 .right-container{
@@ -710,6 +710,9 @@ li{
     .button-container {
         margin-bottom:10px;
         justify-content: center;
+    }
+    .widget{
+        padding:0px;
     }
     .hero-section-footer > div >li {
         padding:0px;
