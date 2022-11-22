@@ -440,7 +440,7 @@ nav > a:nth-of-type(2){
     align-items: center;
     justify-content: center;
     min-height:375px;
-    background-image: url(./assets/images/alp-duran-OHvzciBb7gE-unsplash.jpg);
+    background-image: url("../images/alp-duran-OHvzciBb7gE-unsplash.jpg");
     background-size: 100% 100%;
 }
 .newsletter-container{
