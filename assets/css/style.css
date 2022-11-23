@@ -452,8 +452,8 @@ navbar > a:hover {
     justify-content: space-around;
     width:80%;
     margin: 0 auto;
-    margin-top:-20px;
-    padding-bottom:15px;
+    margin-top:-30px;
+    padding-bottom:30px;
     font-family: var(--font);
     font-size: 1.60em;
     font-weight: bold;
@@ -809,6 +809,18 @@ li{
     .main-image-details > h6{
         font-size:1.10em;
     }
+    .ribbon{
+        width:43.5px;
+        height:65.5px;
+        font-size: 0.75em;
+    }
+    .main-image-container > img{
+        margin-top:-70px;
+        min-width:400px;
+        width:100%;
+        /* border:1px solid red; */
+        /* transform: rotate(335deg); */
+    }
     .collection-section{
         background-image: none;
     }
@@ -859,9 +871,7 @@ li{
         font-size:7.25em;
     }
     .ribbon{
-        width:43.5px;
-        height:65.5px;
-        font-size: 0.75em;
+        display:none;
     }
     .main-image-container > img{
         margin-top:-70px;
@@ -869,6 +879,12 @@ li{
         width:100%;
         /* border:1px solid red; */
         /* transform: rotate(335deg); */
+    }
+    .main-image-name > h3{
+        font-size:1.35em;
+        text-align: center;
+        margin-bottom:5px;
+        font-family: var(--font);
     }
     .button-container > button {
         font-size:1.05em;
