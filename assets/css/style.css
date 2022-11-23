@@ -304,40 +304,48 @@ navbar > a:hover {
 }
 .main-image-description {
     width:65%;
-    margin:20px auto;
+    margin:10px auto;
     display:flex;
     flex-direction: column;
     align-items: flex-end;
     margin-bottom:50px;
+    min-width:350px;
     /* border:1px solid red; */
 }
-.main-image-rating{
+.main-image-name{
     font-family: var(--font);
     display:flex;
     align-items: center;
     margin-top:-10px;
     min-width:300px;
+    margin: 0 auto;
+    width:100%;
+    /* border:1px solid red; */
+   justify-content: center;
+
 }
-.main-image-rating >h5{
+.main-image-name >h3{
     font-family: var(--font);
-    font-size:1.75em;
+    font-size:1.95em;
+    /* border:1px solid red; */
 }
-.stars-container{
-    border-left:1px solid rgb(128, 128, 128);
-    margin:0px 10px;
-    padding:0px 5px;
-}
-.main-image-btn{
-    width:65%;
+
+.main-image-details{
+    width:45%;
     display:flex;
     justify-content: space-around;
     /* border:1px solid red; */
+    margin: 0 auto;
     font-family: var(--font);
+    margin-top:10px;
 }
-.main-image-btn > h5{
+.main-image-details > h5{
     font-size: 2.60em;
 }
-.main-image-btn > button{
+.main-image-details > h6{
+    font-size:1.5em;
+}
+.main-image-details > button{
     font-weight: bold;
 }
 .hero-section-footer{
@@ -763,6 +771,12 @@ li{
     .main-image-background > h1{
         font-size:7.25em;
     }
+    .main-image-details > h5{
+        font-size: 1.85em;
+    }
+    .main-image-details > h6{
+        font-size:1.10em;
+    }
 }
 @media screen  and (max-width:768px){
     .shopping-cart-alert{
@@ -817,10 +831,12 @@ li{
     .main-image-container > img{
         margin-top:-70px;
         min-width:400px;
-        width:105%;
-        margin-left:-5px;
+        width:100%;
         /* border:1px solid red; */
         /* transform: rotate(335deg); */
+    }
+    .button-container > button {
+        font-size:1.05em;
     }
     .main-image-container{
         margin-bottom:-20px;
@@ -839,6 +855,13 @@ li{
         margin-top:-2px;
         margin-bottom:-2px;
     }
+   .widget-image{
+        height:100px;
+        width:100px;
+   }
+   .widget-text-container{
+        margin: 5px 15px;
+   }
     .card-container{
         grid-template-columns: 1fr 1fr;
         justify-content: center;
@@ -934,18 +957,19 @@ li{
     .ribbon{
         display:none;
     }
-    .main-image-rating{
+    .main-image-name{
         display:flex;
         width:200px;
         margin: 0 auto;
         justify-content: center;
-        /* border:1px solid red; */
         padding-top:5px;
     }
-    .main-image-rating > h5{
-        font-size:1.2em;
+    .main-image-name > h3{
+        font-size:1.35em;
+        text-align: center;
+        margin-bottom:5px;
     }
-    .main-image-btn{
+    .main-image-details{
         margin: 0 auto;
     }
     .stars-container{
