@@ -299,7 +299,7 @@ navbar > a:hover {
     width:100%;
     margin-top:-120px;
     padding-right:80px;
-    transform: rotate(330deg);
+    /* transform: rotate(330deg); */
     /* border:1px solid red; */
 }
 .main-image-description {
@@ -815,10 +815,15 @@ li{
         font-size: 0.75em;
     }
     .main-image-container > img{
-        margin-top:-80px;
-        min-width:385px;
-        width:95%;
-        transform: rotate(335deg);
+        margin-top:-70px;
+        min-width:400px;
+        width:105%;
+        margin-left:-5px;
+        /* border:1px solid red; */
+        /* transform: rotate(335deg); */
+    }
+    .main-image-container{
+        margin-bottom:-20px;
     }
     .main-image-description{
         margin-bottom:40px;
@@ -916,6 +921,9 @@ li{
 }
 
 @media screen  and (max-width:600px){
+    body{
+        overflow-x: none !important;
+    }
     nav > a:nth-of-type(2){
         margin-left:10px;
     }
