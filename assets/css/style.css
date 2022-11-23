@@ -669,7 +669,6 @@ nav > a:nth-of-type(2){
     width:80%;
     margin: 0 auto;
     padding:20px 0px;
-    border-bottom:1px solid grey;
     margin-bottom:10px;
 }
 .footer-text-container{
@@ -726,21 +725,7 @@ li{
     color:#929292;
     cursor: pointer;
 }
-footer{
-    position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.90em;
-    color:#808080;
-    /* bottom: 0; */
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    padding: 10px;
-    padding-bottom:20px;
-}
+
 
 @media screen and (max-width:1024px){
     .header-container{
