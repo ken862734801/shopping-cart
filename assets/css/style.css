@@ -166,7 +166,7 @@ navbar > a:hover {
 }
 .widgets-container{
     margin:70px 0px;
-    width:80%;
+    width:70%;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -307,7 +307,7 @@ navbar > a:hover {
     display:flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-bottom:30px;
+    margin-bottom:50px;
     /* border:1px solid red; */
 }
 .main-image-rating{
@@ -655,7 +655,7 @@ nav > a:nth-of-type(2){
     border-radius:6px;
     right: 6px;
     top: 4px;
-    z-index:1000;
+    z-index:1;
     cursor:pointer;
 }
 #submit > img{
@@ -774,11 +774,11 @@ li{
         font-size:.70em;
     }
     .left-container > h1{
-        font-size:3.1em;
+        font-size:2.95em;
         text-align: center;
     }
     .left-container > h2{
-        font-size:3.1em;
+        font-size:3.5em;
         text-align: center;
     }
     .left-container > p {
@@ -814,6 +814,9 @@ li{
         min-width:385px;
         width:95%;
         transform: rotate(335deg);
+    }
+    .main-image-description{
+        margin-bottom:40px;
     }
     .hero-section-footer > div >li {
         padding:0px;
