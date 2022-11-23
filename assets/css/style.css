@@ -335,7 +335,7 @@ navbar > a:hover {
     font-family: var(--font);
 }
 .main-image-btn > h5{
-    font-size: 2.10em;
+    font-size: 2.60em;
 }
 .main-image-btn > button{
     font-weight: bold;
@@ -759,6 +759,9 @@ li{
     }
     .widget-image{
         margin:6px;
+    }
+    .main-image-background > h1{
+        font-size:7.25em;
     }
 }
 @media screen  and (max-width:768px){
