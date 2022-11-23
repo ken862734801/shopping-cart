@@ -968,9 +968,11 @@ li{
         font-size:1.35em;
         text-align: center;
         margin-bottom:5px;
+        font-family: var(--font);
     }
     .main-image-details{
         margin: 0 auto;
+        font-family: var(--font);
     }
     .stars-container{
         padding:0px 4px;
