@@ -104,17 +104,22 @@ navbar > a:hover {
     border-radius:50%;
     background-color: var(--orange);
 }
-.customer-icon{
+/* .customer-icon{
     margin-top:-3px !important;
-    /* border:1px solid red; */
+    border:1px solid red;
 }
 .customer-icon > img{
     width:23px;
-}
+} */
 .menu-bars{
     display:none;
 }
 /* CSS for the hero section. */
+/* .hero-section{
+    background-image: url("/assets/images/bg.png"); 
+    background-repeat: repeat;
+    background-size: auto;
+} */
 .hero-section-container{
     width:80%;
     padding:30px 0px;
@@ -429,7 +434,9 @@ navbar > a:hover {
 /* CSS for the collection section and collection cards. */
 .collection-section{
     padding:70px 0px;
-    
+    /* background-image: url("/assets/images/bg.png"); 
+    background-repeat: repeat;
+    background-size: auto; */
 }
 .collection-section > h2{
     font-family: var(--font);
@@ -760,6 +767,28 @@ li{
     .customer-icon{
         display:none;
     }
+    .left-container > h1{
+        font-size:2.95em;
+        text-align: center;
+    }
+    .left-container > h2{
+        font-size:3.5em;
+        text-align: center;
+    }
+    .left-container > p {
+        font-size:1.10em;
+        text-align: center;
+        margin: 20px auto;
+        margin-bottom:-2px;
+    }
+    .left-container > button {
+        font-size: 0.90em;
+        padding:8px 0px;
+    }
+    .button-container {
+        margin-bottom:10px;
+        justify-content: center;
+    }
     .widgets-container{
         min-width:400px;
         margin: 30px auto;
@@ -778,6 +807,9 @@ li{
     }
     .main-image-details > h6{
         font-size:1.10em;
+    }
+    .collection-section{
+        background-image: none;
     }
 }
 @media screen  and (max-width:768px){
