@@ -59,6 +59,7 @@ header{
     padding-top:13px;
     font-size: 0.95em;
     cursor:pointer;
+    margin-left:10px
 }
 navbar > a{
     display:inline-flex;
@@ -772,6 +773,7 @@ li{
     }
     .brand-logo{
         font-size:.70em;
+        margin-left:0px;
     }
     .left-container > h1{
         font-size:2.95em;
