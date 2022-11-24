@@ -97,18 +97,18 @@ const wmn_12 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_
 
 let wmns_shoes = [wmn_1, wmn_2, wmn_3, wmn_4, wmn_5, wmn_6, wmn_7, wmn_8, wmn_9, wmn_10, wmn_11, wmn_11];
 
-const kid_1 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_1 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/aeeddc93-e208-4407-af29-3be439717f85/air-force-1-premium-big-kids-shoes-wJCwFb.png", 75, 90);
 const kid_2 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
-const kid_3 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_3 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/aeeddc93-e208-4407-af29-3be439717f85/air-force-1-premium-big-kids-shoes-wJCwFb.png", 75, 90);
 const kid_4 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
 const kid_5 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
 const kid_6 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
 const kid_7 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
-const kid_8 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_8 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/aeeddc93-e208-4407-af29-3be439717f85/air-force-1-premium-big-kids-shoes-wJCwFb.png", 75, 90);
 const kid_9 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
-const kid_10 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_10 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/aeeddc93-e208-4407-af29-3be439717f85/air-force-1-premium-big-kids-shoes-wJCwFb.png", 75, 90);
 const kid_11 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
-const kid_12 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_12 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/aeeddc93-e208-4407-af29-3be439717f85/air-force-1-premium-big-kids-shoes-wJCwFb.png", 75, 90);
 
 let kids_shoes = [kid_1, kid_2, kid_3, kid_4, kid_5, kid_6, kid_7, kid_8, kid_9, kid_10, kid_11, kid_12];
 
