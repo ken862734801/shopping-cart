@@ -64,9 +64,10 @@ header{
 }
 .brand-logo{
     padding-top:13px;
-    font-size: 0.95em;
+    font-size: 1.90em;
     cursor:pointer;
-    margin-left:10px
+    margin-left:10px;
+    font-weight:bold;
 }
 navbar > a{
     display:inline-flex;
@@ -453,7 +454,7 @@ navbar > a:hover {
     width:80%;
     margin: 0 auto;
     margin-top:-30px;
-    padding-bottom:30px;
+    padding-bottom:20px;
     font-family: var(--font);
     font-size: 1.60em;
     font-weight: bold;
@@ -487,7 +488,7 @@ nav > a:nth-of-type(2){
     position:relative;
 }
 .item-card-body{
-    width:75%;
+    width:70%;
     margin: 0 auto;
 }
 .item-card-body > img {
@@ -750,9 +751,9 @@ li{
     .header-container{
         width:95%;
     }
-    .brand-logo{
-        padding-top:11px;
-        font-size:.75em;
+    .brand-logo > a{
+        font-size:2em;
+        margin-top:-5px;
     }
     navbar{
         display:none;
@@ -1035,5 +1036,8 @@ li{
     }
     .hero-section-footer{
         margin:10px 0px;
+    }
+    .collection-section > nav{
+        padding-bottom:30px;
     }
 }

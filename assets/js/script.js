@@ -5,6 +5,7 @@ let nextBtn = document.getElementById("next-btn");
 let current_page = 1;
 let items_per_page = 6;
 
+
 function prevPage(){
     if(current_page > 1){
         current_page--;
@@ -24,7 +25,7 @@ function changePage(page){
     collectionContainer.textContent = "";
     
     for(let i = (page-1)*items_per_page; i < (page * items_per_page); i++){
-        createProductCard(wmns_shoes[i]);
+        createProductCard(array[i]);
     };
     if(page == 1){
         previousBtn.style.opacity = .55;
@@ -44,7 +45,7 @@ function changePage(page){
 };
 
 function numPages(){
-    return Math.ceil(products.length/items_per_page);
+    return Math.ceil(12/items_per_page);
 }
 
 window.onload = function() {
@@ -79,6 +80,7 @@ const product_11 = new Product("Nike Air Max 90","https://static.nike.com/a/imag
 const product_12 = new Product("Nike Air Max 90","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png", 130 , 150 );
 
 let products = [product_1, product_2, product_3, product_4, product_5, product_6, product_7, product_8, product_9, product_10, product_11, product_12];
+let array = products;
 
 const wmn_1 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
 const wmn_2 = new Product("Air Jordan 1 Mid SE", "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c7da5594-709f-4f9d-8fec-5627122dbe18/air-jordan-1-mid-se-womens-shoes-B1XFDz.png", 125, 145);
@@ -95,20 +97,20 @@ const wmn_12 = new Product("Jordan Sophia", "https://static.nike.com/a/images/t_
 
 let wmns_shoes = [wmn_1, wmn_2, wmn_3, wmn_4, wmn_5, wmn_6, wmn_7, wmn_8, wmn_9, wmn_10, wmn_11, wmn_11];
 
-const kid_1 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
-const kid_2 = new Product();
-const kid_3 = new Product();
-const kid_4 = new Product();
-const kid_5 = new Product();
-const kid_6 = new Product();
-const kid_7 = new Product();
-const kid_8 = new Product();
-const kid_9 = new Product();
-const kid_10 = new Product();
-const kid_11 = new Product();
-const kid_12 = new Product();
+const kid_1 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/aeeddc93-e208-4407-af29-3be439717f85/air-force-1-premium-big-kids-shoes-wJCwFb.png", 75, 90);
+const kid_2 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_3 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/aeeddc93-e208-4407-af29-3be439717f85/air-force-1-premium-big-kids-shoes-wJCwFb.png", 75, 90);
+const kid_4 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_5 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_6 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_7 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_8 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/aeeddc93-e208-4407-af29-3be439717f85/air-force-1-premium-big-kids-shoes-wJCwFb.png", 75, 90);
+const kid_9 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_10 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/aeeddc93-e208-4407-af29-3be439717f85/air-force-1-premium-big-kids-shoes-wJCwFb.png", 75, 90);
+const kid_11 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/da87d43e-ec8e-4890-b913-37acf923c13b/air-force-1-lv8-3-big-kids-shoes-q3N9g3.png", 75, 90);
+const kid_12 = new Product("Nike Air Force 1 LV8 3","https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/aeeddc93-e208-4407-af29-3be439717f85/air-force-1-premium-big-kids-shoes-wJCwFb.png", 75, 90);
 
-let kids_shoes = [];
+let kids_shoes = [kid_1, kid_2, kid_3, kid_4, kid_5, kid_6, kid_7, kid_8, kid_9, kid_10, kid_11, kid_12];
 
 function createProductCard (product){
     // Element Creation.
@@ -188,3 +190,82 @@ function hasScrolled() {
     
     lastScrollTop = st;
 }
+
+
+let mens = true;
+let womens = false;
+let kids = false;
+
+function chooseCollection (e){
+    if(e.target.id === "womens"){
+        womens = true;
+        currentCollection();
+        array = wmns_shoes;
+        current_page = 1;
+        changePage(current_page)
+        console.log(array)
+        console.log(womens)
+    }else if(e.target.id === "mens"){
+        mens = true;
+        currentCollection();
+       array = products;
+       current_page = 1;
+       changePage(current_page)
+       console.log(array)
+       console.log(mens)
+    }else if(e.target.id === "kids"){
+        kids = true;
+        currentCollection();
+      array = kids_shoes;
+      current_page = 1;
+      changePage(current_page)
+      console.log(array)
+      console.log(kids)
+    }else{
+        return
+    }
+};
+
+let womensCollection = document.getElementById("womens");
+let mensCollection = document.getElementById("mens");
+let kidsCollection = document.getElementById("kids");
+
+function currentCollection () {
+    if(womens === true){
+        womensCollection.style.color = "#FBB239";
+        mensCollection.style.color = "black";
+        kidsCollection.style.color = "black";
+        womens = false;
+        mens = false;
+        kids = false;
+    }else if (mens === true){
+        womensCollection.style.color = "black";
+        mensCollection.style.color =  "#FBB239";
+        kidsCollection.style.color = "black";
+        womens = false;
+        kids = false;
+        mens = false;
+    }else if (kids === true){
+        kidsCollection.style.color = "#FBB239";
+        womensCollection.style.color = "black";
+        mensCollection.style.color =  "black";
+        womens = false;
+        mens = false;
+        kids = false;
+    }
+}
+
+currentCollection();
+
+
+let styles = document.querySelectorAll(".collection-style");
+
+for(i=0; i < styles.length; i++){
+    styles[i].addEventListener("click", chooseCollection);
+}
+
+// User clicks on collection style.
+// Array containing that style is choosen.
+// Loop through the array to create product cards. 
+// When user clicks on another collection style.
+// Update the array to a new style.
