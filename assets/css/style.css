@@ -828,7 +828,6 @@ li{
     .ribbon{
         width:43.5px;
         height:65.5px;
-        font-size: 0.75em;
     }
     .main-image-container > img{
         margin-top:-70px;
@@ -839,6 +838,9 @@ li{
     }
     .collection-section{
         background-image: none;
+    }
+    .brand-logo > a{
+        font-size:0.95em;
     }
 }
 @media screen  and (max-width:768px){
@@ -851,8 +853,8 @@ li{
     .number{
        font-size:2.2em;
     }
-    .brand-logo{
-        font-size:.70em;
+    .brand-logo {
+        font-size:1.45em;
         margin-left:0px;
     }
     .left-container > h1{
@@ -1020,6 +1022,10 @@ li{
     .right-container{
         margin-top:-30px;
         margin-bottom:5px;
+    }
+    .brand-logo{
+        font-size:1.45em;
+        margin-left:0px;
     }
     .ribbon{
         display:none;
