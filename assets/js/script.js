@@ -269,3 +269,23 @@ for(i=0; i < styles.length; i++){
 // Loop through the array to create product cards. 
 // When user clicks on another collection style.
 // Update the array to a new style.
+
+document.addEventListener( 'DOMContentLoaded', function () {
+    var splide = new Splide( '.splide', {
+        perPage: 2,
+        gap: "1.5em",
+        height: "130px",
+        breakpoints: {
+            1024: {
+                perPage:1,
+            },
+            640: {
+              perPage: 1,
+              width:"75%",
+            }
+          }
+      } );
+      
+      splide.mount();
+  });
+  

@@ -100,8 +100,8 @@
     justify-content: space-between;
     border:1px solid red;
     max-width:600px;
-    min-width:400px;
-    padding:30px;
+    min-width:250px;
+    padding:30px 0px;
 }
 .splide__list{
     width:100%;
@@ -118,6 +118,7 @@
     border-radius: 6px;
     background-color: rgb(15, 15, 15);
     margin: 0 auto;
+    border:1px solid white;
 }
 .widget-name{
     font-size:0.80em;
@@ -144,20 +145,30 @@
     width:40%;
     border:1px solid red;
 }
+.widget-image{
+    width:95px;
+    height:95px;
+    border-radius:8px;
+    margin:5px;
+}
 .widget-image > img{
-    width:120%;
-    height:120%;
+    width:115%;
+    height:115%;
+    border-radius:8px;
     margin: 0 auto !important;
     border:1px solid red;
 }
 .splide_pagination{
-   top:12em;
+   top:30em !important;
    border:1px solid red !important;
 }
 .splide__pagination__page{
     background: black !important;
 }
 @media screen and (max-width: 1024px){
+    .widget-container{
+        margin: 0 auto;
+    }
     .widget{
         margin: 0 auto;
     }

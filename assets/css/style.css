@@ -1062,3 +1062,24 @@ li{
         padding-bottom:30px;
     }
 }
+
+/* SPLIDE */
+.splide__list{
+    width:100%;
+    display:flex;
+}
+.splide__slide{
+    width:100%;
+    border:1px solid red;
+}
+.splide__pagination{
+    border:1px solid red;
+    width:100% !important;
+}
+.splide__pagination__page{
+    background: black !important;
+    width:100% !important;
+}
+.splide__arrows{
+    display:none;
+}
