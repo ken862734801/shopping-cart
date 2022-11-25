@@ -275,7 +275,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         type: 'loop',
         perPage: 2,
         gap: "1.5em",
-        height: "130px",
+        height: "140px",
         breakpoints: {
             1024: {
                 perPage:1,
