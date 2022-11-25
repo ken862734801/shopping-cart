@@ -269,7 +269,24 @@ for(i=0; i < styles.length; i++){
 // Loop through the array to create product cards. 
 // When user clicks on another collection style.
 // Update the array to a new style.
+let modal = document.getElementById("modal");
+let span = document.getElementsByClassName("close")[0];
 
+document.addEventListener("DOMContentLoaded", function (){
+    modal.style.display = "block";
+})
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  
 document.addEventListener( 'DOMContentLoaded', function () {
     var splide = new Splide( '.splide', {
         type: 'loop',
