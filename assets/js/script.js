@@ -272,6 +272,7 @@ for(i=0; i < styles.length; i++){
 
 document.addEventListener( 'DOMContentLoaded', function () {
     var splide = new Splide( '.splide', {
+        type: 'loop',
         perPage: 2,
         gap: "1.5em",
         height: "130px",
