@@ -171,9 +171,154 @@ navbar > a:hover{
     margin-left:5px;
     margin-bottom:-4px;
 }
-
+/* CSS selectors for the widget container and widget components. */
+.widgets-container{
+    margin:70px 0px;
+    width:70%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border:1px solid red; */
+}
+.widget{
+    display:flex;
+    width:45%;
+    border:1px solid rgb(15, 15, 15);
+    background-color: rgb(15, 15, 15);
+    border-radius: 6px;
+    min-width:250px;
+    padding:2px;
+    margin:2px;
+}
 /* CSS selectors for the right container and right container components. */
+.right-container{
+    width:50%;
+    display:flex;
+    justify-content: center;
+    /* border:1px solid blue; */
+    min-width:400px;
+    margin: auto;
+}
 
+.main-image-background{
+    position:relative;
+    background-color: var(--gray);
+    border-radius: 36px;
+    max-width:775px;
+    margin: 10px auto;
+    min-width:400px;
+    /* border:1px solid blue; */
+}
+.main-image-background > h1{
+    font-family: var(--font);
+    color:white;
+    font-size: 11em;
+    text-align: center;
+}
+.ribbon{
+    display:flex;
+    align-items: center;
+    font: var(--font);
+    color:white;
+    position:absolute;
+    top:0px;
+    right:40px;
+    width:60px;
+    height:95px;
+    background-color: #fd5445e5;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% calc(100% - 20px), 0% 100%, 0% 0%)
+}
+.ribbon > h6 {
+    text-align: center;
+    margin-bottom:10px;
+    font-family: var(--font);
+    font-size:1em;
+}
+.main-image-container > img{
+    max-width:775px;
+    width:100%;
+    margin-top:-120px;
+    padding-right:80px;
+    /* transform: rotate(330deg); */
+    /* border:1px solid red; */
+}
+.main-image-description {
+    width:65%;
+    margin:10px auto;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom:50px;
+    min-width:350px;
+    /* border:1px solid red; */
+}
+.main-image-name{
+    font-family: var(--font);
+    display:flex;
+    align-items: center;
+    margin-top:-5px;
+    min-width:350px;
+    margin: 0 auto;
+    width:100%;
+    /* border:1px solid red; */
+   justify-content: center;
+
+}
+.main-image-name >h3{
+    font-family: var(--font);
+    font-size:1.35em;
+    text-align:center ;
+    /* border:1px solid red; */
+}
+.stars-container{
+    border-left:1px solid gray;
+    margin: 0px 10px;
+    padding:0px 10px;
+}
+.main-image-details{
+    width:45%;
+    padding:0px 20px;
+    display:flex;
+    justify-content: space-between;
+    /* border:1px solid green; */
+    margin: 0 auto;
+    font-family: var(--font);
+    margin-top:10px;
+    /* align-items: center; */
+}
+.main-image-details > h5{
+    font-size: 2.70em;
+}
+.main-image-details > h6{
+    font-size:1.25em;
+}
+.main-button > button{
+    font-family: var(--font);
+    font-weight: bold;
+    padding:8px;
+    border:1px solid black;
+    width:110px;
+}
+/* CSS selectors for the hero section footer and footer section components. */
+.hero-section-footer{
+    margin-top:40px;
+    margin-bottom:20px;
+}
+.hero-section-footer > div {
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.hero-section-footer > div > li{
+    font-size:0.95em;
+}
+.hero-section-footer > div > li:nth-of-type(2){
+    border-right:2px solid var(--yellow);
+    border-left:2px solid var(--yellow);
+    padding:0px 120px;
+}
 /* CSS selectors for the offer section and offer section components. */
 .offer-section{
     background-color: var(--gray);
@@ -599,7 +744,7 @@ li{
     border: 1px solid #888;
     width: 25%;
     max-width:400px;
-    min-width:350px;
+    min-width:375px;
 }
 .modal-header{
     display:flex;
@@ -636,7 +781,7 @@ li{
     font-size:0.90em;
 }
 .modal-input{
-    padding:10px;
+    padding:8px;
     width:95%;
     font-size:1.1em;
 }
@@ -654,7 +799,7 @@ li{
     font-size: 1.25em;
     width:95%;
     border:none;
-    padding:10px;
+    padding:9px;
     border-radius:2px;
     margin-top:5px;
     cursor: pointer;
@@ -666,7 +811,7 @@ li{
     padding-top:20px;
     width:95%;
     margin: 0 auto;
-    font-size:.90em;
+    font-size:.95em;
     /* text-align: center; */
 }
 
@@ -705,7 +850,15 @@ li{
     .main-image-details > h6{
         font-size:1.10em;
     }
-        /* CSS media queries for the collection section and collection section components. */
+    /* CSS media queries for the hero footer and hero footer components. */
+    .hero-section-footer > div > li{
+        margin: 10px auto;
+    }
+    .hero-section-footer > div > li:nth-of-type(2){
+        border:none;
+        padding:0px 10px;
+    }
+    /* CSS media queries for the collection section and collection section components. */
     nav > a:nth-of-type(2){
         margin-left:10px;
     }
@@ -766,6 +919,31 @@ li{
     .offer-card-body > p{
         font-size: 0.95em;
         line-height: 1.40;
+    }
+    /* CSS media queries for the right container and right container components. */
+    .main-image-container > img{
+        margin-top:-70px;
+        min-width:400px;
+        width:100%;
+    }
+    .main-image-name > h3{
+        font-size:1.35em;
+        text-align: center;
+        margin-bottom:5px;
+        font-family: var(--font);
+    }
+    .button-container > button {
+        font-size:1.05em;
+    }
+    .main-image-container{
+        margin-bottom:-20px;
+    }
+    .main-image-description{
+        margin-bottom:40px;
+    }
+    .stars-container{
+        padding:0px 4px;
+        margin: 0px 5px;
     }
         /* CSS media queries for the collection section and collection section container components. */
     .collection-container{
