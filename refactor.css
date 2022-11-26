@@ -1,39 +1,31 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: var(--font);
-}
-html{
-    scroll-behavior: smooth;
-}
-body{
-    min-height:100vh;
-}
-
-a{
-    text-decoration: none;
-    color:black;
-}
 :root{
     --orange: #FD5545;
     --yellow: #FBB239;
     --gray: #f3f3f3;
     --font: 'Syne', sans-serif;
 }
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
 .orange{
-    color:var(--orange);
+    color: var(--orange);
 }
 .yellow{
-    color:var(--yellow);
+    color: var(--yellow);
+}
+.gray{
+    color:gray;
 }
 .black{
     font-size:1.05em;
     font-weight: bold;
     color:black;
 }
-.gray{
-    color:gray;
+.black:hover{
+    color:rgb(80, 80, 80);
 }
 .dark-gray{
     color:rgb(85, 85, 85);
@@ -42,35 +34,48 @@ a{
     font-size:2.6em;
     margin-right:16px;
 }
-/* CSS for the header and nav. */
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+body{
+    min-height:100vh;
+}
+/* CSS selectors for the header and header components. */
 header{
     width:100%;
     background-color: white;
-    z-index:1000;
-    font-family: var(--font);
-    top:0px;
-    position: fixed;
-    transition: top 0.1s ease-in-out;
     padding-bottom:10px;
+    z-index:1000000;
+    top:0px;
+    position:fixed;
+    transition: top 0.1s ease-in-out;
 }
-.header-up {
-    top: -60px;
+.header-up{
+    top:-60px;
 }
-.header-container {
-    position:relative;
+.header-container{
     width:80%;
     margin: 0 auto;
     display:flex;
     justify-content: space-between;
+    position:relative;
 }
-.brand-logo{
-    padding-top:13px;
-    font-size: 1.90em;
+.brand-logo-container{
+    padding-top:14px;
+}
+.brand-logo-container > a{
+    font-weight: bold;
     cursor:pointer;
-    margin-left:10px;
-    font-weight:bold;
+    font-size:1.85em;
 }
-navbar > a{
+.brand-logo-container > a:hover{
+    color:rgb(80, 80, 80);
+}
+navbar > a {
     display:inline-flex;
     padding-top:20px;
     border-top:2.5px solid rgba(255, 255, 255, 0);
@@ -78,29 +83,31 @@ navbar > a{
     font-weight: bold;
     font-size:1.0em;
 }
-navbar > a:hover {
+navbar > a:hover{
     transition: 0.2s;
-    /* border-top: 2.5px solid var(--yellow); */
     color:var(--yellow);
-    cursor: pointer;
-}
-.fa-lg{
-    cursor:pointer;
-}
-.customer-icon{
     cursor:pointer;
 }
 .customer-functions-container{
     display:flex;
 }
 .customer-functions-container > div{
-    margin: 0px 10px;
     padding-top:22px;
+    margin: 0px 10px;
 }
-.shopping-cart{
+.fa-lg, .fa-xl{
+    cursor:pointer;
+}
+.fa-lg:hover, .fa-xl:hover{
+    color:rgb(80, 80, 80);
+}
+.shopping-cart-container{
     position:relative;
 }
-.fa-cart-shopping{
+.is-active{
+    color:var(--yellow);
+}
+.is-active:hover{
     color:var(--yellow);
 }
 .shopping-cart-alert{
@@ -113,66 +120,58 @@ navbar > a:hover {
     border-radius:50%;
     background-color: var(--orange);
 }
-
-.menu-bars{
+.menu-bars-container{
     display:none;
 }
-/* CSS for the hero section. */
-/* .hero-section{
-    background-image: url("/assets/images/bg.png"); 
-    background-repeat: repeat;
-    background-size: auto;
-} */
+/* CSS selectors for the hero section and hero section components. */
 .hero-section-container{
     width:80%;
     padding:30px 0px;
     margin: 0 auto;
     margin-top:60px;
-    /* border:1px solid red; */
 }
 .hero-section-body{
     display:flex;
     justify-content: center;
     flex-wrap: wrap-reverse;
-    /* border:1px solid red; */
 }
 .left-container{
-    font-family: var(--font);
+    padding-top:40px;
     width:50%;
     min-width:400px;
-    padding-top:40px;
-    /* border:1px solid red; */
 }
 .left-container > h1{
-    font-size:4.80em;
+    font-size: 4.80em;
+    line-height: 1;
 }
 .left-container > h2{
     font-size:4.80em;
 }
-.left-container > p {
+.left-container > p{
     width:85%;
-    font-size:1.15em;
-    margin-top:10px;
+    font-size:1.2em;
+    margin-top:20px;
 }
 .button-container{
     display:flex;
 }
-.button-container > button {
+.button-container > button{
+    font-size: 1.0em;
     background-color: var(--orange);
     color:white;
-    padding:11px;
-    margin-top:30px;
-    width:130px;
-    border-radius:8px;
+    cursor: pointer;
     border:none;
-    font-size: 1.0em;
-    cursor:pointer;
+    border-radius: 8px;
+    width:130px;
+    padding:11px;
+    margin-top:35px;
 }
 .button-container > button > span > img{
     width:18px;
     margin-left:5px;
     margin-bottom:-4px;
 }
+/* CSS selectors for the widget container and widget components. */
 .widgets-container{
     margin:70px 0px;
     width:70%;
@@ -191,76 +190,7 @@ navbar > a:hover {
     padding:2px;
     margin:2px;
 }
-.widget-image-container{
-    width:40%;
-}
-.widget-image{
-    height:95px;
-    width:95px;
-    /* border:1px solid rgb(15, 15, 15); */
-    border-radius:6px;
-    background-color: white;
-    margin:5px;
-    display:flex;
-    justify-content: center;
-    overflow: hidden;
-}
-.widget-image > img{
-    width:120%;
-    height:120%;
-    margin: 0 auto !important;
-    /* border:1px solid red; */
-}
-.widget-text-container{
-    width:60%;
-    margin:5px 10px;
-    font:var(--font);
-}
-.widget-name{
-    font-size:0.80em;
-    color:white;
-}
-.widget-rating{
-    display:flex;
-    align-items: center;
-    color:gray;
-    margin-top:2px;
-}
-.widget-rating > p:nth-of-type(1){
-    font-size: .70em;
-}
-.widget-rating > p:nth-of-type(2){
-    font-size: 0.7em;
-    margin-left:5px;
-}
-.widget-price {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    width:95%;
-    /* border:1px solid red; */
-}
-.widget-price > p{
-    font-size: 1.65em;
-    color:white;
-}
-.fa-heart{
-    margin-top:3px;
-    color:white;
-    cursor:pointer;
-}
-.widget-style{
-    font-size:0.70em;
-    color:white;
-    margin:3px 0px;
-}
-.widget-add-btn{
-    font-size:0.85em;
-    cursor:pointer;
-}
-.widget-add-btn:hover{
-    text-decoration: underline;
-}
+/* CSS selectors for the right container and right container components. */
 .right-container{
     width:50%;
     display:flex;
@@ -369,8 +299,10 @@ navbar > a:hover {
     border:1px solid black;
     width:110px;
 }
+/* CSS selectors for the hero section footer and footer section components. */
 .hero-section-footer{
-    margin:20px 0px;
+    margin-top:40px;
+    margin-bottom:20px;
 }
 .hero-section-footer > div {
     display:flex;
@@ -387,37 +319,37 @@ navbar > a:hover {
     border-left:2px solid var(--yellow);
     padding:0px 120px;
 }
-/* CSS for the offer section and offer cards. */
+/* CSS selectors for the offer section and offer section components. */
 .offer-section{
     background-color: var(--gray);
-    padding:60px 0px;
-    font-family: var(--font);
+    padding:40px 0px;
+    padding-bottom:80px;
+}
+.offer-section > h2{
+    font-size:2.5em;
+    margin-bottom:40px;
     text-align: center;
 }
-.offer-section > h2 {
-    font-size:2.5em;
-    margin-bottom:50px;
-}
-.card-container{
+.offer-section-container{
     width:80%;
     margin: 0 auto;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
 }
-.card{
+.offer-card{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-style: normal;
     background-color: white;
-    max-width:250px;
-    padding:10px;
+    max-width:235px;
+    padding:12px;
     margin:10px;
     border-radius: 8px;
 }
-.card-header{
+.offer-card-header{
     padding:16px 0px;
 }
 .icon-container{
@@ -434,31 +366,28 @@ navbar > a:hover {
     width:70%;
     overflow: hidden;
 }
-.card-body{
+.offer-card-body{
     padding-bottom:20px;
 }
-.card-title{
+.offer-card-title{
     color:var(--yellow);
     font-size: 1.25em;
     font-weight: bold;
+    text-align: center;
 }
-.card-body > p {
+.offer-card-body > p{
     line-height: 2;
     font-size:1.05em;
+    text-align: center;
 }
-/* CSS for the collection section and collection cards. */
+/* CSS selectors for the collection section and collection items. */
 .collection-section{
-    padding:70px 0px;
-    /* background-image: url("/assets/images/bg.png"); 
-    background-repeat: repeat;
-    background-size: auto; */
+    padding:40px 0px;
 }
 .collection-section > h2{
-    font-family: var(--font);
+    margin-bottom:40px;
     font-size:2.5em;
     text-align: center;
-    margin-bottom:60px;
-
 }
 .collection-section > nav{
     display:flex;
@@ -466,10 +395,8 @@ navbar > a:hover {
     justify-content: space-around;
     width:80%;
     margin: 0 auto;
-    margin-top:-30px;
     padding-bottom:20px;
-    font-family: var(--font);
-    font-size: 1.60em;
+    font-size: 1.40em;
     font-weight: bold;
 }
 nav > a{
@@ -500,13 +427,12 @@ nav > a:nth-of-type(2){
     position:relative;
 }
 .item-card-body{
-    width:70%;
+    width:80%;
     margin: 0 auto;
 }
 .item-card-body > img {
     width:100%;
 }
-
 .item-name{
     position: relative;
     font-family: var(--font);
@@ -545,7 +471,7 @@ nav > a:nth-of-type(2){
     margin-top:15px;
 }
 .arrow{
-    width:35px;
+    width:30px;
     cursor: pointer;
 }
 .left{
@@ -555,11 +481,10 @@ nav > a:nth-of-type(2){
     width:100%;
 }
 
-/* CSS for the client section and client cards. */
+/* CSS selectors for the client section and client components. */
 .client-section{
-    padding:80px 0px;
-    margin-top:-10px;
-    padding-bottom:100px;
+    padding:40px 0px;
+    padding-bottom:80px;
     background-color: var(--gray);
     background-size: 40px 40px;
     background-image: repeating-linear-gradient(45deg, #f7f7f7 0, #f7f7f7 4px, #fcfcfc 0, #fcfcfc 50%);
@@ -569,7 +494,7 @@ nav > a:nth-of-type(2){
     font-size:2.5em;
     max-width: 500px;
     margin:0 auto;
-    margin-bottom:50px;
+    margin-bottom:40px;
     text-align: center;
 }
 .client-container{
@@ -580,8 +505,7 @@ nav > a:nth-of-type(2){
     margin: 0 auto;
 }
 .client-card{
-    max-width:380px;
-    /* max-height:250px; */
+    max-width:350px;
     margin:10px;
     padding:24px;
     border:1px solid #dddddd;
@@ -591,44 +515,40 @@ nav > a:nth-of-type(2){
 .client-card-header{
     display:flex;
     align-items: center;
-    font-family: var(--font);
     margin-bottom:15px;
 }
 .client-picture{
-    width:50px;
-    height:50px;
+    width:48px;
+    height:48px;
     border:1px solid var(--gray);
     background-color: var(--gray);
     border-radius:50%;
 }
+.client-picture > img {
+    width: 100%;
+    border-radius:inherit;
+}
 .client-information{
     margin-left:8px;
 }
-.client-information >p:nth-child(2){
+.client-information > p:nth-child(2){
     font-size:0.90em;
-}
-.client-picture > img {
-    width:100%;
-    border-radius: inherit;
 }
 .client-card-body{
     margin-top:-5px;
-    text-align: left;
-    font-family: var(--font);
+    text-align:left;
 }
-.client-card-body > p {
-    font-size:1em;
-    line-height: 1.85;
+.client-card-body > p{
+    line-height:1.75;
     color:grey;
 }
-
-/* CSS for the newsletter section and newsletter links. */
+/* CSS selectors for newsletter section and the newsletter components. */
 .newsletter-section{
     display:flex;
     align-items: center;
     justify-content: center;
     min-height:375px;
-    background-image: url("../images/alp-duran-OHvzciBb7gE-unsplash.jpg");
+    background-image: url("/assets/images/alp-duran-OHvzciBb7gE-unsplash.jpg");
     background-size: 100% 100%;
 }
 .newsletter-container{
@@ -637,18 +557,16 @@ nav > a:nth-of-type(2){
     align-items: center;
     justify-content: center;
     width:100%;
-    min-height:375px;
+    min-height:415px;
     background-color: rgba(0, 0, 0, 0.37);
 }
 .newsletter-container > h2{
-    font-family: var(--font);
     font-size:2.5em;
     color:white;
     text-align: center;
     margin-bottom:5px;
 }
 .newsletter-container > p {
-    font-family: var(--font);
     width:80%;
     max-width:800px;
     min-width:380px;
@@ -693,8 +611,10 @@ nav > a:nth-of-type(2){
 #submit > img{
     width:100%;
 }
-/* CSS for the footer section and footer links. */
-
+/* CSS selectors for footer section and the footer components. */
+.footer-section{
+    padding:40px 0px;
+}
 .footer-container{
     display:flex;
     flex-wrap: wrap;
@@ -708,7 +628,7 @@ nav > a:nth-of-type(2){
     flex-direction: column;
     justify-content: center;
     min-width:350px;
-    width:50%;
+    width:50%
 }
 .footer-text-container > p{
     max-width:700px;
@@ -718,9 +638,8 @@ nav > a:nth-of-type(2){
     font-weight: bold;
     line-height: 2;
     margin-top:40px;
-    font-size:0.95em;
+    font-size:0.90em;
 }
-
 .footer-button-container{
     display:flex;
     margin-top:20px;
@@ -749,7 +668,6 @@ nav > a:nth-of-type(2){
     width:50%;
 }
 li{
-    font-family: var(--font);
     font-weight: bold;
     list-style-type: none;
     margin: 20px 5px;
@@ -757,6 +675,54 @@ li{
     color:#929292;
     cursor: pointer;
 }
+/* CSS selectors for side navigation and the navigation components. */
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  .side-nav-header{
+        width:100%;
+        display:flex;
+        justify-content: flex-end;
+  }
+  .fa-xmark{
+        font-size:1.40em;
+        margin-top:16px;
+        margin-right:25px;
+        cursor: pointer;
+  }
+  .fa-xmark:hover{
+        color:rgb(80, 80, 80);
+  }
+  .side-nav-container{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        margin: 0 auto;
+  }
+  .side-nav-container > a{
+        font-size:1.15em;
+        padding:20px 25px;
+        font-weight: bold;
+  }
+  .side-nav-container > a:hover{
+        background-color:var(--gray);
+  }
+  .side-nav-container > i {
+        padding:25px 25px;
+        margin-top:10px;
+  }
+  .side-nav-container > i:hover{
+        background-color:var(--gray);
+        cursor:pointer;
+  }
 /* CSS selectors for modal and the modal components. */
 .modal{
     display: none; 
@@ -795,7 +761,6 @@ li{
 .modal-body{
     margin-top:5px;
     padding:0px 10px;
-    font:var(--font);
     /* border:1px solid red; */
 }
 .modal-body > h2{
@@ -847,194 +812,119 @@ li{
     width:95%;
     margin: 0 auto;
     font-size:.95em;
+    /* text-align: center; */
 }
-/* CSS selectors for side navigation and the navigation components. */
-.side-nav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: white;
-    overflow-x: hidden;
-    transition: 0.5s;
-  }
-  .side-nav-header{
-        width:100%;
-        display:flex;
-        justify-content: flex-end;
-  }
-  .fa-xmark{
-        font-size:1.40em;
-        margin-top:16px;
-        margin-right:25px;
-        cursor: pointer;
-  }
-  .fa-xmark:hover{
-        color:rgb(80, 80, 80);
-  }
-  .side-nav-container{
-        display:flex;
-        flex-direction: column;
-        width:100%;
-        margin: 0 auto;
-  }
-  .side-nav-container > a{
-        font-size:1.15em;
-        padding:20px 25px;
-        font-weight: bold;
-  }
-  .side-nav-container > a:hover{
-        background-color:var(--gray);
-  }
-  .side-nav-container > i {
-        padding:25px 25px;
-        margin-top:10px;
-  }
-  .side-nav-container > i:hover{
-        background-color:var(--gray);
-        cursor:pointer;
-  }
 
-@media screen and (max-width:1024px){
-    .header-container{
-        width:95%;
-    }
-    .brand-logo > a{
-        font-size:2em;
-        margin-top:-5px;
-    }
+/* CSS media queries for tablet landscape screens. */
+@media screen and (max-width: 1024px) {
+    /* CSS media queries for header and header components. */
     navbar{
         display:none;
     }
-    .customer-functions-container > div{
-        margin: 0px 7.5px;
-        padding-top:18px;
-    }
-    .menu-bars{
-        display:block;
-        padding-left:4px;
-    }
-    .customer-icon{
+    .customer-icon-container{
         display:none;
     }
+    .menu-bars-container{
+        display:block;
+    }
+    /* CSS media queries for the left container and left container components. */
     .left-container > h1{
-        font-size:2.95em;
-        text-align: center;
+        font-size:3.95em;
     }
-    .left-container > h2{
-        font-size:3.5em;
-        text-align: center;
+    .left-container > h2 {
+        font-size:4.15em;
     }
-    .left-container > p {
-        font-size:1.10em;
-        text-align: center;
-        margin: 20px auto;
-        margin-bottom:-2px;
-    }
-    .left-container > button {
-        font-size: 0.90em;
-        padding:8px 0px;
-    }
-    .button-container {
-        margin-bottom:10px;
-        justify-content: center;
-    }
-    .widgets-container{
-        min-width:400px;
-        margin: 30px auto;
-    }
-    .widget{
-        margin: 5px auto;
-    }
-    .widget-image{
-        margin:6px;
-    }
-    .main-image-background > h1{
+    /* CSS media queries for the right container and rigth container components. */
+    .main-image-background > h1 {
         font-size:7.25em;
     }
-    .main-image-details > h5{
+    .ribbon{
+        display:none;
+    }
+    .main-image-container > img {
+        margin-top:-70px;
+    }
+    .main-image-detail > h5 {
         font-size: 1.85em;
     }
     .main-image-details > h6{
         font-size:1.10em;
     }
-    .main-image-name {
-        font-size:0.75em;
+    /* CSS media queries for the hero footer and hero footer components. */
+    .hero-section-footer > div > li{
+        margin: 10px auto;
     }
-    .ribbon{
-        width:43.5px;
-        height:65.5px;
+    .hero-section-footer > div > li:nth-of-type(2){
+        border:none;
+        padding:0px 10px;
     }
-    .main-image-container > img{
-        margin-top:-70px;
-        min-width:400px;
+    /* CSS media queries for the collection section and collection section components. */
+    nav > a:nth-of-type(2){
+        margin-left:10px;
+    }
+    .item-container{
+        width:195px;
+        margin: 0 auto;
+    }
+    .item-card-body{
         width:100%;
-        /* border:1px solid red; */
-        /* transform: rotate(335deg); */
     }
-    .collection-section{
-        background-image: none;
+    .item-card-body > img{
+        width:95%;
     }
-    .brand-logo > a{
+    .item-name{
         font-size:0.95em;
     }
-}
-@media screen  and (max-width:768px){
+
+} 
+/* CSS media queries for tablet portrait screens. */
+@media screen and (max-width: 768px) {
+    /* CSS media queries for header and header components. */
+    .header-container{
+        width:95%;
+    }
+    .brand-logo-container > a{
+        font-size: 1.55em;
+    }
+    .customer-functions-container > div{
+        padding-top:18px;
+    }
     .shopping-cart-alert{
         top:14px;
     }
-    .section-title{
-        font-size:2.00em !important;
+    /* CSS media queries for the offer section container and offer section container components. */
+    .offer-section-container{
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        width:400px;
     }
-    .number{
-       font-size:2.2em;
+    .offer-card{
+        width:190px;
+        margin: 10px 5px auto;
     }
-    .brand-logo {
-        font-size:1.45em;
-        margin-left:0px;
-    }
-    .left-container > h1{
-        font-size:2.95em;
-        text-align: center;
-    }
-    .left-container > h2{
-        font-size:3.5em;
-        text-align: center;
-    }
-    .left-container > p {
-        font-size:1.10em;
-        text-align: center;
-        margin: 20px auto;
-        margin-bottom:-2px;
-    }
-    .left-container > button {
-        font-size: 0.90em;
+    .offer-card-header{
         padding:8px 0px;
     }
-    .button-container {
-        margin-bottom:10px;
-        justify-content: center;
+    .icon-container{
+        width:105px;
+        height:105px;
+        overflow: hidden;
     }
-    .widget{
-        padding:0px;
+    .icon-container > img{
+        width:70%;
     }
-    .right-container{
-        margin: -10px auto;
+    .offer-card-body{
+        padding-bottom:5px;
     }
-    .main-image-background > h1{
-        font-size:7.25em;
+    .offer-card-body > p{
+        font-size: 0.95em;
+        line-height: 1.40;
     }
-    .ribbon{
-        display:none;
-    }
+    /* CSS media queries for the right container and right container components. */
     .main-image-container > img{
         margin-top:-70px;
         min-width:400px;
         width:100%;
-        /* border:1px solid red; */
-        /* transform: rotate(335deg); */
     }
     .main-image-name > h3{
         font-size:1.35em;
@@ -1051,222 +941,36 @@ li{
     .main-image-description{
         margin-bottom:40px;
     }
-    .hero-section-footer > div >li {
-        padding:0px;
-        /* border:1px solid red; */
-        margin:20px auto;
-    }
-    .hero-section-footer > div > li:nth-of-type(2){
-        border:none;
-        padding:1px 0px;
-        margin-top:-2px;
-        margin-bottom:-2px;
-    }
-   .widget-image{
-        height:110px;
-        width:110px;
-   }
-   .widget{
-        min-width:270px;
-   }
-   /* .widget-image-container{
-    border:1px solid red;
-   } */
-   .widget-text-container{
-        margin: 5px 20px;
-        /* border:1px solid blue; */
-   }
-   .widget-price{
-        font-size:0.75em;
-        margin:6px 0px;
-   }
-   .widget-name{
-        font-size:0.85em;
-   }
-   .widget-style{
-        font-size:0.80em;
-        padding-bottom:2px;
-   }
-   .widget-rating{
-        font-size:1.0em;
-   }
-    .card-container{
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
-        width:400px;
-    }
-    .card{
-       width:190px;
-       margin: 10px 5px auto;
-    }
-    .card-header{
-        padding:8px 0px;
-    }
-    .icon-container{
-        width:95px;
-        height:95px;
-        overflow: hidden;
-    }
-    .icon-container > img{
-        width:70%;
-    }
-    .card-body > p{
-        font-size: 0.95em;
-        line-height: 1.65em;
-    }
-    .card-body{
-        padding-bottom:5px;
-    }
-   .collection-container{
-        grid-template-columns: 1fr 1fr;
-   }
-   nav > a {
-        font-size:0.80em;
-   }
-   .item-container{
-        width:195px;
-        margin: 0 auto;
-   }
-   .item-card-body{
-        width:100%;
-   }
-   .item-card-body > img{
-        width:95%;
-   }
-   .item-name{
-        font-size:0.95em;
-   }
-   .arrow {
-        width:30px;
-   }
-   .client-card{
-        width:300px;
-        padding:16px;
-   }
-   .client-card-body > p {
-        font-size:0.95em;
-        line-height: 1.55;
-   }
-   .client-picture{
-        width:45px;
-        height:45px;
-    }
-    .client-information{
-        margin-left:8px;
-    }
-    .client-information > p:nth-of-type(1){
-        font-size:.95em;
-   }
-    .client-information >p:nth-child(2){
-        font-size:0.85em;
-    }
-    .newsletter-container > p{
-        font-size:1em;
-    }
-    .footer-text-container{
-        font-size:0.95em;
-    }
-    .footer-link-container > .quick-links, .find-products, .get-help {
-        font-size:0.95em;
-    }
-}
-
-@media screen  and (max-width:600px){
-    body{
-        overflow-x: none !important;
-    }
-    nav > a:nth-of-type(2){
-        margin-left:10px;
-    }
-    .right-container{
-        margin-top:-30px;
-        margin-bottom:5px;
-    }
-    .brand-logo{
-        font-size:1.45em;
-        margin-left:0px;
-    }
-    .ribbon{
-        display:none;
-    }
-    .main-image-name{
-        display:flex;
-        width:200px;
-        margin: 0 auto;
-        justify-content: center;
-        padding-top:5px;
-    }
-    .main-image-name > h3{
-        font-size:1.35em;
-        text-align: center;
-        margin-bottom:5px;
-        font-family: var(--font);
-    }
-    .main-image-details{
-        margin: 0 auto;
-        font-family: var(--font);
-    }
     .stars-container{
         padding:0px 4px;
         margin: 0px 5px;
     }
-    .widgets-container{
-        padding-top:10px;
-        margin-bottom:10px;
+        /* CSS media queries for the collection section and collection section container components. */
+    .collection-container{
+        grid-template-columns: 1fr 1fr;
+        width:95%;
     }
-    .hero-section-footer{
-        margin:10px 0px;
+    nav > a{
+        font-size:0.90em;
     }
-    .collection-section > nav{
-        padding-bottom:30px;
+    .item-card-body{
+        width:100%;
+        padding:5px;
     }
-    .left-container{
-        margin-bottom:-20px;
+    .retail-price{
+        font-size:1.25em;
+    }
+    .msrp-price{
+        font-size:0.80em;
+    }
+    /* CSS media queries for the client section and client section container components. */
+    .client-card-body > p{
+        line-height: 1.5em;
+        font-size:0.95em;
+    }
+    /* CSS media queries for the newsletter section and newsletter section container components. */
+    .newsletter-container > p{
+        font-size:1.00em;
     }
 }
-.widgets-container{
-    padding-bottom:40px;
-}
-.splide__pagination__page{
-    background: rgb(24, 24, 24) !important;
-}
-.splide__pagination__page.is-active{
-    background: black !important;
-}
-.splide__arrows{
-    display:none;
-}
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 100000; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    bottom: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+@media screen and (max-width: 480px) {}

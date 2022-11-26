@@ -45,7 +45,7 @@ function changePage(page){
 };
 
 function numPages(){
-    return Math.ceil(12/items_per_page);
+    return Math.ceil(array.length/items_per_page);
 }
 
 window.onload = function() {
@@ -150,7 +150,7 @@ function createProductCard (product){
     itemPriceContainer.append(retailPrice, msrpPrice);
 }
 
-console.log(products);
+
 
 // Hide Header on on scroll down
 var didScroll;
@@ -270,6 +270,8 @@ for(i=0; i < styles.length; i++){
 // When user clicks on another collection style.
 // Update the array to a new style.
 
+
+  
 document.addEventListener( 'DOMContentLoaded', function () {
     var splide = new Splide( '.splide', {
         type: 'loop',
@@ -289,4 +291,53 @@ document.addEventListener( 'DOMContentLoaded', function () {
       
       splide.mount();
   });
+  // Functions & DOM elements for the side navigation. //
+
+let main = document.getElementById("main");
+let offerSection = document.getElementById("offer-section");
+let header = document.getElementById("header");
+let sideNav = document.getElementById("sideNav");
+let menuBars = document.getElementById("menu-bars");
+let closeBtn = document.getElementById("close-btn");
+
+
+function addBlur (){
+    main.style.filter = "blur(1.25px)";
+    document.body.style.backgroundColor = "rgba(0, 0, 0, 0.37)";
+    header.style.backgroundColor = "rgba(0, 0, 0, 0.005)";
+    offerSection.style.backgroundColor = "rgba(0, 0, 0, 0.005)";
+};
+function removeBlur (){
+    main.style.filter = "none";
+    document.body.style.backgroundColor = "";
+    header.style.backgroundColor = "";
+    offerSection.style.backgroundColor = "";
+};
+function openNav () {
+    addBlur();
+    sideNav.style.width = "70%";
+    header.style.marginTop = "-60px";
+};
+function closeNav(){
+    removeBlur();
+    sideNav.style.width = "0";
+    header.style.marginTop = "0";
+};
+
+menuBars.addEventListener("click", openNav);
+closeBtn.addEventListener("click", closeNav);
   
+let customerIcon = document.getElementById("customer-icon");
+let closeModalBtn = document.getElementById("close-modal-btn");
+let modal = document.getElementById("modal");
+
+function showModal (){
+    modal.style.display = "block";
+};
+
+function hideModal (){
+    modal.style.display = "none";
+}
+
+customerIcon.addEventListener("click", showModal);
+closeModalBtn.addEventListener("click", hideModal);
