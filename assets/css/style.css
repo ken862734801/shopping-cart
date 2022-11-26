@@ -44,7 +44,7 @@ a{
 header{
     width:100%;
     background-color: white;
-    z-index:100000;
+    z-index:1000;
     font-family: var(--font);
     top:0px;
     position: fixed;
@@ -54,7 +54,6 @@ header{
 .header-up {
     top: -60px;
 }
-
 .header-container {
     position:relative;
     width:80%;
@@ -487,8 +486,7 @@ nav > a:nth-of-type(2){
     width:80%;
     min-width:400px;
     margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    
+    grid-template-columns: 1fr 1fr 1fr;  
 }
 .item-container{
     max-width:380px;
@@ -1108,7 +1106,7 @@ li{
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
 .modal-content {
     background-color: #fefefe;
