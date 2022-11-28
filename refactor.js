@@ -188,7 +188,7 @@ class Product {
 };
 const mens_1 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
 const mens_2 = new Product("Nike Air Force 1 '07","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b7d9211c-26e7-431a-ac24-b0540fb3c00f/air-force-1-07-mens-shoes-5QFp5Z.png", 110 , 130 );
-const mens_3 = new Product("Nike Air Max 90 SE","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e2ced356-c33d-4cb7-a4cb-96ad3e8f6bee/air-max-90-se-mens-shoes-3LGz4X.png", 120 , 140 );
+const mens_3 = new Product("Air Jordan 1 Low","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a4936f14-2fba-4d88-a7d8-445d6582c3e4/air-jordan-1-low-mens-shoes-6jlL02.png", 110 , 130 );
 const mens_4 = new Product("Air Jordan 1 Low","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a4936f14-2fba-4d88-a7d8-445d6582c3e4/air-jordan-1-low-mens-shoes-6jlL02.png", 110 , 130 );
 const mens_5 = new Product("Nike Metcon 8","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cc7b28f9-30c5-405f-985b-3dc56984b2cb/metcon-8-mens-training-shoes-ppltpW.png", 130 , 150 );
 const mens_6 = new Product("Air Jordan 7 Retro","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/bd3da02f-2ddc-4f0c-bb7b-f94c634cc0dd/air-jordan-7-retro-mens-shoes-7Zr804.png", 200 , 240 );
@@ -476,6 +476,7 @@ window.onload = changeClients(current_clients);
 function changeClients(page){
     if(page < 1) page = 1;
     if (page > numClients()) page = numClients();
+
     clientContainer.textContent = "";
     
     for(let i = (page-1)*clients_per_page; i < (page * clients_per_page); i++){
