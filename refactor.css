@@ -124,6 +124,10 @@ navbar > a:hover{
     display:none;
 }
 /* CSS selectors for the hero section and hero section components. */
+.hero-section{
+    background-image: url(./assets/images/bg.png);
+    background-size: auto;
+}
 .hero-section-container{
     width:80%;
     padding:30px 0px;
@@ -172,13 +176,13 @@ navbar > a:hover{
     margin-bottom:-4px;
 }
 /* CSS selectors for the widget container and widget components. */
-.widgets-container{
+/* .widgets-container{
     margin:70px 0px;
     width:70%;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* border:1px solid red; */
+    border:1px solid red;
 }
 .widget{
     display:flex;
@@ -189,7 +193,7 @@ navbar > a:hover{
     min-width:250px;
     padding:2px;
     margin:2px;
-}
+} */
 /* CSS selectors for the right container and right container components. */
 .right-container{
     width:50%;
@@ -243,8 +247,7 @@ navbar > a:hover{
     /* border:1px solid red; */
 }
 .main-image-description {
-    width:65%;
-    margin:10px auto;
+    width:90%;
     display:flex;
     flex-direction: column;
     align-items: flex-end;
@@ -253,14 +256,13 @@ navbar > a:hover{
     /* border:1px solid red; */
 }
 .main-image-name{
+    width:65%;
     font-family: var(--font);
     display:flex;
     align-items: center;
     margin-top:-5px;
     min-width:350px;
-    margin: 0 auto;
-    width:100%;
-    /* border:1px solid red; */
+    /* border:1px solid blue; */
    justify-content: center;
 
 }
@@ -268,23 +270,22 @@ navbar > a:hover{
     font-family: var(--font);
     font-size:1.35em;
     text-align:center ;
-    /* border:1px solid red; */
 }
 .stars-container{
     border-left:1px solid gray;
     margin: 0px 10px;
     padding:0px 10px;
 }
-.main-image-details{
+/* .main-image-details{
     width:45%;
     padding:0px 20px;
     display:flex;
     justify-content: space-between;
-    /* border:1px solid green; */
+    border:1px solid green;
     margin: 0 auto;
     font-family: var(--font);
     margin-top:10px;
-    /* align-items: center; */
+    align-items: center;
 }
 .main-image-details > h5{
     font-size: 2.70em;
@@ -298,11 +299,31 @@ navbar > a:hover{
     padding:8px;
     border:1px solid black;
     width:110px;
+} */
+.main-image-detail{
+    width:70%;
+    /* border:1px solid green; */
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.main-image-price{
+    font-size:3em;
+    /* border:1px solid red; */
+}
+.main-image-button{
+    max-height:40px;
+    padding:10px;
+    font-weight: bold;
+    max-width:125px;
+    width:70%;
+    border:1px solid black;
 }
 /* CSS selectors for the hero section footer and footer section components. */
 .hero-section-footer{
-    margin-top:40px;
-    margin-bottom:20px;
+    padding-bottom:60px;
+    width:80%;
+    margin: 0 auto;
 }
 .hero-section-footer > div {
     display:flex;
@@ -374,6 +395,7 @@ navbar > a:hover{
     font-size: 1.25em;
     font-weight: bold;
     text-align: center;
+    margin-bottom:10px;
 }
 .offer-card-body > p{
     line-height: 2;
@@ -419,6 +441,7 @@ nav > a:nth-of-type(2){
 }
 .item-container{
     max-width:380px;
+    min-width:300px;
     margin:10px;
 }
 .item-card{
@@ -427,7 +450,7 @@ nav > a:nth-of-type(2){
     position:relative;
 }
 .item-card-body{
-    width:80%;
+    width:75%;
     margin: 0 auto;
 }
 .item-card-body > img {
@@ -526,6 +549,8 @@ nav > a:nth-of-type(2){
 }
 .client-picture > img {
     width: 100%;
+    max-height:48px;
+    min-width:48px;
     border-radius:inherit;
 }
 .client-information{
@@ -541,6 +566,11 @@ nav > a:nth-of-type(2){
 .client-card-body > p{
     line-height:1.75;
     color:grey;
+}
+.client.pagination-container{
+    margin-top:40px;
+    margin-bottom:-30px;
+    /* border:1px solid red; */
 }
 /* CSS selectors for newsletter section and the newsletter components. */
 .newsletter-section{
@@ -757,6 +787,8 @@ li{
 }
 #close-modal-btn{
     font-size:1.30em;
+    margin-top:-10px;
+    padding-top:20px;
 }
 .modal-body{
     margin-top:5px;
@@ -900,7 +932,7 @@ li{
     }
     .offer-card{
         width:190px;
-        margin: 10px 5px auto;
+        margin: 10px 1px auto;
     }
     .offer-card-header{
         padding:8px 0px;
@@ -953,6 +985,15 @@ li{
     nav > a{
         font-size:0.90em;
     }
+    nav > a:nth-of-type(2){
+        padding-left:30px;
+    }
+    nav > a:nth-of-type(3){
+        padding-left:30px;
+    }
+    .item-container{
+        min-width:225px;
+    }
     .item-card-body{
         width:100%;
         padding:5px;
@@ -973,4 +1014,118 @@ li{
         font-size:1.00em;
     }
 }
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+    .item-container{
+        min-width:190px;
+    }
+}
+
+.widgets-container{
+    margin:70px 0px;
+    width:75%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border:1px solid red; */
+}
+.widget{
+    display:flex;
+    width:45%;
+    border:1px solid rgb(15, 15, 15);
+    background-color: rgb(15, 15, 15);
+    border-radius: 6px;
+    min-width:265px;
+    padding:6px;
+    margin:2px;
+    
+}
+.widget-image-container{
+    width:40%;
+    margin:0px;
+}
+.widget-image{
+    height:105px;
+    width:105px;
+    /* border:1px solid rgb(15, 15, 15); */
+    border-radius:6px;
+    background-color: white;
+    margin:0px;
+    display:flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.widget-image > img{
+    width:120%;
+    height:120%;
+    margin: 0 auto !important;
+    /* border:1px solid red; */
+}
+.widget-text-container{
+    width:70%;
+    margin-left:20px;
+    font:var(--font);
+    /* border:1px solid red; */
+}
+.widget-name{
+    font-size:0.80em;
+    color:white;
+}
+.widget-rating{
+    display:flex;
+    align-items: center;
+    color:gray;
+    margin-top:6px;
+    margin-bottom:3px;
+}
+.widget-rating > p:nth-of-type(1){
+    font-size: .65em;
+}
+.widget-rating > p:nth-of-type(2){
+    font-size: 0.65em;
+    margin-left:5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.widget-price {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:95%;
+    
+    /* border:1px solid red; */
+}
+.widget-price > p{
+    font-size: 1.65em;
+    color:white;
+    margin-top:4px;
+
+}
+.fa-heart{
+    margin-top:5px;
+    color:white;
+    cursor:pointer;
+    padding-right:5px;
+}
+.widget-style{
+    font-size:0.65em;
+    color:white;
+    margin:6px 0px;
+}
+.widget-add-btn{
+    font-size:0.75em;
+}
+/* .widget-add-btn:hover{
+    text-decoration: underline;
+} */
+.splide__pagination__page{
+    background: rgb(24, 24, 24) !important;
+}
+.splide__pagination__page.is-active{
+    background: black !important;
+}
+.splide__arrows{
+    display:none;
+}
+.widgets-container{
+    padding-bottom:30px;
+}
