@@ -187,11 +187,11 @@ class Product {
     }
 };
 const mens_1 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
-const mens_2 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
-const mens_3 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
-const mens_4 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
-const mens_5 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
-const mens_6 = new Product("Air Jordan 1 Mid","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0e7fc8f3-76b7-4631-b147-4dad4b1ff241/air-jordan-1-mid-shoes-M2KS6n.png", 130 , 150 );
+const mens_2 = new Product("Nike Air Force 1 '07","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/b7d9211c-26e7-431a-ac24-b0540fb3c00f/air-force-1-07-mens-shoes-5QFp5Z.png", 110 , 130 );
+const mens_3 = new Product("Air Jordan 1 Low","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a4936f14-2fba-4d88-a7d8-445d6582c3e4/air-jordan-1-low-mens-shoes-6jlL02.png", 110 , 130 );
+const mens_4 = new Product("Air Jordan 1 Low","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a4936f14-2fba-4d88-a7d8-445d6582c3e4/air-jordan-1-low-mens-shoes-6jlL02.png", 110 , 130 );
+const mens_5 = new Product("Nike Metcon 8","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cc7b28f9-30c5-405f-985b-3dc56984b2cb/metcon-8-mens-training-shoes-ppltpW.png", 130 , 150 );
+const mens_6 = new Product("Air Jordan 7 Retro","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/bd3da02f-2ddc-4f0c-bb7b-f94c634cc0dd/air-jordan-7-retro-mens-shoes-7Zr804.png", 200 , 240 );
 
 const mens_7 = new Product("Nike Air Max 90","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png", 130 , 150 );
 const mens_8 = new Product("Nike Air Max 90","https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/0aa27593-5556-43e0-b808-f723c9963bcf/air-max-90-mens-shoes-BjwJgG.png", 130 , 150 );
@@ -333,3 +333,176 @@ document.addEventListener( 'DOMContentLoaded', function () {
       splide.mount();
   });
   
+  class Client {
+    constructor(name, occupation, image, testimonial){
+        this.name = name;
+        this.occupation = occupation;
+        this.image = image;
+        this.testimonial = testimonial;
+    }
+  }
+
+  let clientContainer = document.getElementById("client-container");
+
+  function createClientCard (client){
+
+    let clientCard = document.createElement("div");
+    let clientCardHeader = document.createElement("div");
+    let clientPicture = document.createElement("div");
+    let clientImage = document.createElement("img");
+    let clientInformation = document.createElement("div");
+    let p1 = document.createElement("p");
+    let p2 = document.createElement("p");
+    let clientCardBody = document.createElement("div");
+    let p3 = document.createElement("p");
+
+    clientContainer.appendChild(clientCard);
+
+    clientCard.append(clientCardHeader, clientCardBody);
+    clientCardHeader.append(clientPicture, clientInformation);
+    clientPicture.appendChild(clientImage);
+    clientInformation.append(p1, p2);
+    clientCardBody.appendChild(p3);
+
+    clientCard.className = "client-card";
+    clientCardHeader.className = "client-card-header";
+    clientPicture.className = "client-picture";
+    clientInformation.className = "client-information";
+    p1.className = "yellow";
+    clientCardBody.className = "client-card-body";
+
+    clientImage.src = client.image;
+    p1.textContent = client.name;
+    p2.textContent = client.occupation;
+    p3.textContent = client.testimonial;
+
+  };
+
+  let client_1 = new Client("Tyler The Creator", "Designer", "https://images.genius.com/d2a3ce3b4c89571274a7257d3a2cb5dd.1000x1000x1.jpg", "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, assumenda tempora! Magnam ipsum suscipit id quidem. Consectetur adipisicing elit.");
+  let client_2 = new Client("Bad Bunny", "Artist", "https://th.bing.com/th/id/R.ade28410db268820272118034c2c2463?rik=yQewxstBPJ3iDw&pid=ImgRaw&r=0", "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, assumenda tempora! Magnam ipsum suscipit id quidem. Consectetur adipisicing elit.");
+  let client_3 = new Client("Tyler The Creator", "Designer", "https://images.genius.com/d2a3ce3b4c89571274a7257d3a2cb5dd.1000x1000x1.jpg", "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, assumenda tempora! Magnam ipsum suscipit id quidem. Consectetur adipisicing elit.");
+  let client_4 = new Client("Bad Bunny", "Artist", "https://th.bing.com/th/id/R.ade28410db268820272118034c2c2463?rik=yQewxstBPJ3iDw&pid=ImgRaw&r=0", "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, assumenda tempora! Magnam ipsum suscipit id quidem. Consectetur adipisicing elit.");
+  let client_5 = new Client("Tyler The Creator", "Designer", "https://images.genius.com/d2a3ce3b4c89571274a7257d3a2cb5dd.1000x1000x1.jpg", "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, assumenda tempora! Magnam ipsum suscipit id quidem. Consectetur adipisicing elit.");
+  let client_6 = new Client("Bad Bunny", "Artist", "https://th.bing.com/th/id/R.ade28410db268820272118034c2c2463?rik=yQewxstBPJ3iDw&pid=ImgRaw&r=0", "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, assumenda tempora! Magnam ipsum suscipit id quidem. Consectetur adipisicing elit.");
+
+  let clients = [client_1, client_2, client_3, client_4, client_5, client_6];
+
+  let clientNextBtn = document.getElementById("client-next-btn");
+  let clientPreviousBtn = document.getElementById("client-previous-btn");
+
+  clientNextBtn.addEventListener("click", nextClients);
+  clientPreviousBtn.addEventListener("click", prevClients);
+
+  let current_clients = 1;
+
+  let clients_per_page = 3;
+
+//   function changeClientPerPage (){
+//     if(window.matchMedia ("(max-width:768px").matches){
+//         changeClients();
+//         clients_per_page = 1;
+//     }else{
+//         changeClients();
+//         clients_per_page = 3;
+//     }
+// };
+$(window).resize(function(){
+    windowWidth = $(window).width(); // get new width after change
+    if(windowWidth <= 768){
+        clients_per_page = 1;
+        changeClients(current_clients);
+    }else{
+        clients_per_page = 3;
+        changeClients(current_clients);
+    }
+});
+
+// $(window).onload(function(){
+//     windowWidth = $(window).width(); // get new width after change
+//     if(windowWidth <= 768){
+//         clients_per_page = 1;
+//         changeClients(1);
+//     }else{
+//         clients_per_page = 3;
+//         changeClients(1);
+//     }
+// })
+
+jQuery(document).ready(function(){
+    windowWidth = $(window).width(); // get new width after change
+    if(windowWidth <= 768){
+        clients_per_page = 1;
+        changeClients(current_clients);
+    }else{
+        clients_per_page = 3;
+        changeClients(current_clients);
+    }
+});
+
+window.onresize = changeClients(current_clients);
+window.onload = changeClients(current_clients);
+
+// function myFunction() {
+//     let width = window.innerWidth;
+//     console.log(width);
+//     if (width <= 768) {
+//         clients_per_page = 1;
+//         changeClients();
+//     } else {
+//         clients_per_page = 3;
+//         changeClients();
+//     }
+// }
+// window.onresize = myFunction();
+// window.onload = myFunction();
+
+// changeClientPerPage();
+
+
+  function prevClients(){
+    if(current_clients > 1){
+        current_clients--;
+        changeClients(current_clients);
+    }
+};
+
+  function nextClients(){
+    if(current_clients < numClients()){
+        current_clients++;
+        changeClients(current_clients)
+    }
+};
+
+function changeClients(page){
+    if(page < 1) page = 1;
+    if (page > numClients()) page = numClients();
+
+    clientContainer.textContent = "";
+    
+    for(let i = (page-1)*clients_per_page; i < (page * clients_per_page); i++){
+        createClientCard(clients[i]);
+    };
+    if(page == 1){
+        clientPreviousBtn.style.opacity = .55;
+        clientPreviousBtn.style.cursor = "auto";
+    }else {
+        clientPreviousBtn.style.opacity = 1;
+        clientPreviousBtn.style.cursor = "pointer";
+    };
+
+    if(page == numClients()){
+        clientNextBtn.style.opacity = .55;
+        clientNextBtn.style.cursor = "auto";
+    }else {
+        clientNextBtn.style.opacity = 1;
+        clientNextBtn.style.cursor = "pointer";
+    }
+};
+
+function numClients(){
+    return Math.ceil(clients.length/clients_per_page);
+};
+
+window.onload = function() {
+    changeClients(1);
+};
