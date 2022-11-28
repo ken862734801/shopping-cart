@@ -41,36 +41,42 @@ a{
     font-size:2.6em;
     margin-right:16px;
 }
-/* CSS for the header and nav. */
+/* CSS selectors for the header and header components. */
 header{
     width:100%;
     background-color: white;
-    z-index:100000;
-    font-family: var(--font);
-    top:0px;
-    position: fixed;
-    transition: top 0.1s ease-in-out;
     padding-bottom:10px;
+    z-index:1000000;
+    top:0px;
+    position:fixed;
+    transition: top 0.1s ease-in-out;
 }
-.header-up {
-    top: -60px;
+.header-up{
+    top:-60px;
 }
-
-.header-container {
-    position:relative;
+.hero-section{
+    margin-top:-15px;
+}
+.header-container{
     width:80%;
     margin: 0 auto;
     display:flex;
     justify-content: space-between;
+    position:relative;
 }
-.brand-logo{
-    padding-top:13px;
-    font-size: 1.90em;
+.brand-logo-container{
+    padding-top:14px;
+    margin-left:8px;
+}
+.brand-logo-container > a{
+    font-weight: bold;
     cursor:pointer;
-    margin-left:10px;
-    font-weight:bold;
+    font-size:1.85em;
 }
-navbar > a{
+.brand-logo-container > a:hover{
+    color:rgb(80, 80, 80);
+}
+navbar > a {
     display:inline-flex;
     padding-top:20px;
     border-top:2.5px solid rgba(255, 255, 255, 0);
@@ -78,29 +84,31 @@ navbar > a{
     font-weight: bold;
     font-size:1.0em;
 }
-navbar > a:hover {
+navbar > a:hover{
     transition: 0.2s;
-    /* border-top: 2.5px solid var(--yellow); */
     color:var(--yellow);
-    cursor: pointer;
-}
-.fa-lg{
-    cursor:pointer;
-}
-.customer-icon{
     cursor:pointer;
 }
 .customer-functions-container{
     display:flex;
 }
 .customer-functions-container > div{
-    margin: 0px 10px;
     padding-top:22px;
+    margin: 0px 10px;
 }
-.shopping-cart{
+.fa-lg, .fa-xl{
+    cursor:pointer;
+}
+.fa-lg:hover, .fa-xl:hover{
+    color:rgb(80, 80, 80);
+}
+.shopping-cart-container{
     position:relative;
 }
-.fa-cart-shopping{
+.is-active{
+    color:var(--yellow);
+}
+.is-active:hover{
     color:var(--yellow);
 }
 .shopping-cart-alert{
@@ -113,91 +121,203 @@ navbar > a:hover {
     border-radius:50%;
     background-color: var(--orange);
 }
-.menu-bars{
+.menu-bars-container{
     display:none;
 }
+/* CSS selectors for side navigation and the navigation components. */
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top:60px;
+  }
+  .side-nav-header{
+        /* border:1px solid red; */
+        width:100%;
+        display:flex;
+        justify-content: flex-end;
+        margin-top:-60px;
+  }
+  .fa-xmark{
+        font-size:1.40em;
+        margin-top:16px;
+        margin-right:25px;
+        cursor: pointer;
+  }
+  .fa-xmark:hover{
+        color:rgb(80, 80, 80);
+  }
+  .side-nav-container{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        margin: 0 auto;
+  }
+  .side-nav-container > .fa-circle-user{
+        font-size:1.75em;
+  }
+  .side-nav-container > a{
+        font-size:1.00em;
+        padding:20px 25px;
+        font-weight: bold;
+  }
+  .side-nav-container > a:hover{
+        background-color:var(--gray);
+  }
+  .side-nav-container > i {
+        padding:25px 25px;
+        margin-top:10px;
+  }
+  .side-nav-container > i:hover{
+        background-color:var(--gray);
+        cursor:pointer;
+  }
+/*  */
 .section-container{
     width:80%;
+    min-width:400px;
     padding:60px 0px;
     margin: 0 auto;
     margin-top:60px;
-    border:1px solid red;
+    /* border:1px solid red; */
     display:flex;
     flex-wrap: wrap;
 }
+/* CSS selectors for left container and the container components. */
 .left-container{
+    width:65%;
+    /* border:1px solid blue; */
+    display:flex;
+}
+ .gallery-tab{
+     width:150px;
+}
+.gallery-tab > img{
+    width:100%;
+    border-radius:6px;
+    cursor: pointer;
+}
+.main-image-display{
+    max-width:625px;
+    min-width:400px;
+    margin: 0 auto;
+}
+.main-image-display > img{
+    width:100%;
+}
+
+/* CSS selectors for right container and the container components. */
+.right-container{
+    width: 35%;
+    min-width:400px;
+    /* border:1px solid red; */
+}
+.product-name{
+    font-size:1.75em;
+}
+.product-style{
+    font-size:1.1em;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+.product-price{
+    font-size:1.5em;
+    margin:10px 0px;
+}
+.size-title{
+    font-size:1.1em;
+}
+.size-btns-container{
+    padding:10px 0px;
+    max-width:500px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5px;
+    /* border:1px solid red; */
+}
+.size-btns-container > button{
+    width:90%;
+    padding:14px;
+    font-size:1.10em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    border:1px solid #c7c7c7;
+    border-radius:8px;
+}
+.product-description{
+    max-width:500px;
+    line-height: 1.5;
+    font-size:1.1em;
+}
+
+
+
+  @media screen and (max-width: 1024px) {
+    /* CSS media queries for header and header components. */
+    navbar{
+        display:none;
+    }
+    .customer-icon-container{
+        display:none;
+    }
+    .menu-bars-container{
+        display:block;
+    }
+}
+@media screen and (max-width: 768px) {
+    /* CSS media queries for header and header components. */
+    .header-container{
+        width:95%;
+    }
+    .brand-logo-container > a{
+        font-size: 1.55em;
+    }
+    .customer-functions-container > div{
+        padding-top:18px;
+    }
+    .shopping-cart-alert{
+        top:14px;
+    }
+    .image-gallery{
+        display:none;
+    }
+}
+/* .left-container{
     width:60%;
     min-width:400px;
     display:flex;
-    /* border:1px solid green; */
+    justify-content: space-between;
 }
 .right-container{
     width:40%;
 }
 .image-display{
-    max-width:550px;
+    max-width:600px;
     min-width:400px;
-    /* border:1px solid red; */
-    margin: 0 auto;
+
 }
 .image-display > img {
     width:100%;
     border-radius:6px;
 }
 .image-gallery{
-    /* border:1px solid blue; */
-    max-width:130px;
-    margin: 0 auto;
+    max-width:150px;
+
 }
 .gallery-tab{
-    width:130px;
-    margin:8px 0px;
+    width:150px;
 }
 .gallery-tab > img{
     width:100%;
     border-radius:6px;
-    /* border:1px solid black; */
 }
 .product-description{
     line-height: 1.5em;
     max-width:500px;
-}
-section{
-    position: relative;
-}
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 100000; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    bottom: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
-  }
-
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+} */
