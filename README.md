@@ -1,4 +1,4 @@
-# shopping-cart
+# shopping-cart (WIP)
 
 https://ken862734801.github.io/shopping-cart/
 
@@ -24,5 +24,5 @@ https://dribbble.com/shots/17897500-Nike-Shoe-Store-Ecommerce-Landing-Page/attac
 ### Future Development
 
 - Since I am currently learning express and mongoDB, I would like to turn this into a full stack application in the future with the inventory being stored in a database and then fetching the product details from said database through express routes.
-- I also would like to add user auth in the future, as well as a searchbar functionality.
+- I also would like to add user auth, shopping cart functionality, as well as a searchbar in the future.
 - I have to make the design more responsive at ALL the common breakpoints.
