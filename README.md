@@ -1,5 +1,6 @@
 # shopping-cart
 
+https://ken862734801.github.io/shopping-cart/
 
 ## Preview
 <img src="./assets/images/desktop.jpeg">
