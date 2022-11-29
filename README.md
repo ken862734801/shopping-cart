@@ -10,7 +10,6 @@ https://ken862734801.github.io/shopping-cart/
 View on mobile
 
 ## Summary
-
 The goal of this project is to create a full stack e-commerce site. The landing page design was taken from a design I came across on dribble, and will serve as a basis for some of the functionality I plan to implement in the future. Currently I am studying Express Routing and MongoDB. MongoDB will contain the "inventory" database. I am still unsure of which template I will use for the views/layout, I have experience with handlebars; however, pug seems to be more commonly used. 
 
 https://dribbble.com/shots/17897500-Nike-Shoe-Store-Ecommerce-Landing-Page/attachments/13074893?mode=media
